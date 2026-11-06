@@ -122,51 +122,34 @@
       {
         "title": "Security Monitoring & Threat Detection",
         "description": "Detecting threats early through monitoring, analysis and detection engineering.",
-        "features": [
-          "SIEM Monitoring",
-          "Alert Analysis",
-          "Threat Intelligence",
-          "Detection Rules"
-        ]
+        "features": ["SIEM Monitoring", "Alert Analysis", "Threat Intelligence", "Detection Rules"]
       },
       {
         "title": "Incident Response",
         "description": "Managing the full incident lifecycle, from first signal to lasting improvements.",
-        "features": [
-          "Investigation",
-          "Root Cause Analysis",
-          "Playbooks",
-          "NIS2 Reporting"
-        ]
+        "features": ["Investigation", "Root Cause Analysis", "Playbooks", "NIS2 Reporting"]
       },
       {
         "title": "Vulnerability Management",
         "description": "Taking vulnerabilities from scanning all the way to validated remediation.",
-        "features": [
-          "Rapid7",
-          "Risk Prioritization",
-          "Remediation Coordination",
-          "Control Validation"
-        ]
+        "features": ["Rapid7", "Risk Prioritization", "Remediation Coordination", "Control Validation"]
       },
       {
         "title": "Cloud & Endpoint Security",
         "description": "Protecting cloud workloads and endpoints across the organization.",
-        "features": [
-          "AWS",
-          "IAM",
-          "Sophos EDR",
-          "Microsoft Defender",
-          "System Hardening"
-        ]
+        "features": ["AWS", "IAM", "Sophos EDR", "Microsoft Defender", "System Hardening"]
       },
       {
-        "title": "DevSecOps & Automation",
-        "description": "Building security into development workflows instead of adding it afterwards.",
+        "title": "DevSecOps & Security Testing",
+        "description": "Building security into development through testing, code reviews and automation, rather than adding it afterwards.",
         "features": [
+          "Burp Suite",
+          "OWASP",
+          "Static Testing",
+          "Dynamic Testing",
+          "Code Reviews",
           "CI/CD Security",
           "Secure Coding",
-          "OWASP",
           "Python Automation"
         ]
       },
@@ -292,10 +275,7 @@
         "id": 4,
         "title": "NIST Framework Implementation",
         "description": "Implementation of the NIST security framework using Microsoft tools.",
-        "features": [
-          "NIST Framework",
-          "Microsoft Security Tools"
-        ],
+        "features": ["NIST Framework", "Microsoft Security Tools"],
         "developmentDetails": [
           {
             "label": "Overview",
@@ -307,10 +287,7 @@
         "id": 2,
         "title": "IR Playbook",
         "description": "Incident response playbook template for handling vulnerabilities in dependencies.",
-        "features": [
-          "Response Template",
-          "Dependency Vulnerabilities"
-        ],
+        "features": ["Response Template", "Dependency Vulnerabilities"],
         "developmentDetails": [
           {
             "label": "Overview",
@@ -322,12 +299,7 @@
         "id": 3,
         "title": "Portfolio Website",
         "description": "This site: a fast personal portfolio built with React, Vite and Tailwind CSS, with English and German content.",
-        "features": [
-          "Pre-rendered HTML",
-          "Command Menu",
-          "English & German Content",
-          "Light & Dark Themes"
-        ],
+        "features": ["Pre-rendered HTML", "Command Menu", "English & German Content", "Light & Dark Themes"],
         "developmentDetails": [
           {
             "label": "Architecture",

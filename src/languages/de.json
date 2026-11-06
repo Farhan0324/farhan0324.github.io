@@ -122,51 +122,34 @@
       {
         "title": "Security-Monitoring & Bedrohungserkennung",
         "description": "Bedrohungen früh erkennen durch Monitoring, Analyse und Detection Engineering.",
-        "features": [
-          "SIEM-Monitoring",
-          "Alert-Analyse",
-          "Threat Intelligence",
-          "Erkennungsregeln"
-        ]
+        "features": ["SIEM-Monitoring", "Alert-Analyse", "Threat Intelligence", "Erkennungsregeln"]
       },
       {
         "title": "Incident Response",
         "description": "Den gesamten Lebenszyklus von Vorfällen steuern, vom ersten Signal bis zu dauerhaften Verbesserungen.",
-        "features": [
-          "Untersuchung",
-          "Ursachenanalyse",
-          "Playbooks",
-          "NIS2-Meldungen"
-        ]
+        "features": ["Untersuchung", "Ursachenanalyse", "Playbooks", "NIS2-Meldungen"]
       },
       {
         "title": "Schwachstellenmanagement",
         "description": "Schwachstellen vom Scan bis zur validierten Behebung begleiten.",
-        "features": [
-          "Rapid7",
-          "Risikopriorisierung",
-          "Koordination der Behebung",
-          "Kontrollvalidierung"
-        ]
+        "features": ["Rapid7", "Risikopriorisierung", "Koordination der Behebung", "Kontrollvalidierung"]
       },
       {
         "title": "Cloud- & Endpoint-Sicherheit",
         "description": "Cloud-Workloads und Endgeräte im gesamten Unternehmen schützen.",
-        "features": [
-          "AWS",
-          "IAM",
-          "Sophos EDR",
-          "Microsoft Defender",
-          "System-Hardening"
-        ]
+        "features": ["AWS", "IAM", "Sophos EDR", "Microsoft Defender", "System-Hardening"]
       },
       {
-        "title": "DevSecOps & Automatisierung",
-        "description": "Sicherheit in Entwicklungsprozesse einbauen, statt sie nachträglich hinzuzufügen.",
+        "title": "DevSecOps & Sicherheitstests",
+        "description": "Sicherheit durch Tests, Code-Reviews und Automatisierung in die Entwicklung einbauen, statt sie nachträglich hinzuzufügen.",
         "features": [
+          "Burp Suite",
+          "OWASP",
+          "Statische Tests",
+          "Dynamische Tests",
+          "Code-Reviews",
           "CI/CD-Sicherheit",
           "Sichere Programmierung",
-          "OWASP",
           "Python-Automatisierung"
         ]
       },
@@ -292,10 +275,7 @@
         "id": 4,
         "title": "Umsetzung des NIST-Frameworks",
         "description": "Umsetzung des NIST-Sicherheitsframeworks mit Microsoft-Tools.",
-        "features": [
-          "NIST-Framework",
-          "Microsoft-Sicherheitstools"
-        ],
+        "features": ["NIST-Framework", "Microsoft-Sicherheitstools"],
         "developmentDetails": [
           {
             "label": "Überblick",
@@ -307,10 +287,7 @@
         "id": 2,
         "title": "IR Playbook",
         "description": "Vorlage für ein Incident-Response-Playbook zum Umgang mit Schwachstellen in Abhängigkeiten.",
-        "features": [
-          "Reaktionsvorlage",
-          "Schwachstellen in Abhängigkeiten"
-        ],
+        "features": ["Reaktionsvorlage", "Schwachstellen in Abhängigkeiten"],
         "developmentDetails": [
           {
             "label": "Überblick",
@@ -322,12 +299,7 @@
         "id": 3,
         "title": "Portfolio-Website",
         "description": "Diese Website: ein schnelles persönliches Portfolio mit React, Vite und Tailwind CSS, mit Inhalten auf Englisch und Deutsch.",
-        "features": [
-          "Vorgerendertes HTML",
-          "Befehlsmenü",
-          "Inhalte auf Englisch & Deutsch",
-          "Helles & dunkles Design"
-        ],
+        "features": ["Vorgerendertes HTML", "Befehlsmenü", "Inhalte auf Englisch & Deutsch", "Helles & dunkles Design"],
         "developmentDetails": [
           {
             "label": "Architektur",
