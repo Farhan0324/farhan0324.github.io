@@ -4,16 +4,20 @@ import "./index.css";
 import App from "./App.jsx";
 import { getConsent, startAnalytics, trackLink } from "./lib/analytics";
 import { TranslationProvider, getInitialLang, loadLocale } from "./lib/i18n";
+import { getProjectSlug } from "./lib/route";
 
 if (getConsent() === "granted") startAnalytics();
 
 const container = document.getElementById("root");
 const preferred = getInitialLang();
+const slug = getProjectSlug(window.location.pathname);
+// Project pages load their own chunk, so the diagrams add nothing to the home page.
+const ProjectPage = slug ? (await import("./pages/ProjectPage.jsx")).default : null;
 
 const app = (initialLang, preferredLang) => (
   <StrictMode>
     <TranslationProvider initialLang={initialLang} preferredLang={preferredLang}>
-      <App />
+      {slug ? <ProjectPage slug={slug} /> : <App />}
     </TranslationProvider>
   </StrictMode>
 );

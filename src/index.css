@@ -21,6 +21,21 @@
   --accent-2: oklch(0.56 0.14 55);
   --glow: oklch(0.6 0.1 195 / 0.18);
   --ok: oklch(0.68 0.17 155);
+  --dg-surface: #f3f6fb;
+  --dg-panel: #ffffff;
+  --dg-band: #e6edf7;
+  --dg-line: #64748b;
+  --dg-blue: #1d4ed8;
+  --dg-cyan: #0e7490;
+  --dg-teal: #0f766e;
+  --sev-1: #dbeafe;
+  --sev-1-ink: #0b2545;
+  --sev-2: #93c5fd;
+  --sev-2-ink: #0b2545;
+  --sev-3: #2563eb;
+  --sev-3-ink: #ffffff;
+  --sev-4: #1e3a8a;
+  --sev-4-ink: #ffffff;
 }
 
 .dark {
@@ -37,6 +52,21 @@
   --accent-2: oklch(0.82 0.13 75);
   --glow: oklch(0.6 0.1 195 / 0.22);
   --ok: oklch(0.78 0.17 155);
+  --dg-surface: #0e1a2b;
+  --dg-panel: #13233a;
+  --dg-band: #182c47;
+  --dg-line: #7f93ad;
+  --dg-blue: #6ea8fe;
+  --dg-cyan: #5fd0e4;
+  --dg-teal: #5eead4;
+  --sev-1: #1c3556;
+  --sev-1-ink: #dbeafe;
+  --sev-2: #1d4ed8;
+  --sev-2-ink: #ffffff;
+  --sev-3: #60a5fa;
+  --sev-3-ink: #0b1a30;
+  --sev-4: #dbeafe;
+  --sev-4-ink: #0b1a30;
 }
 
 @theme inline {
@@ -55,6 +85,13 @@
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
   --color-ok: var(--ok);
+  --color-dg-surface: var(--dg-surface);
+  --color-dg-panel: var(--dg-panel);
+  --color-dg-band: var(--dg-band);
+  --color-dg-line: var(--dg-line);
+  --color-dg-blue: var(--dg-blue);
+  --color-dg-cyan: var(--dg-cyan);
+  --color-dg-teal: var(--dg-teal);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -406,4 +443,70 @@ dialog[open]::backdrop {
     translate: none;
     filter: none;
   }
+}
+
+/* ───────────────────────── Project diagrams ───────────────────────── */
+
+.dg-node {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.2s;
+}
+.dg-node > rect,
+.dg-node > polygon {
+  fill: var(--dg-panel);
+  stroke: var(--dg-blue);
+  stroke-width: 1.25;
+  transition:
+    fill 0.2s,
+    stroke-width 0.2s;
+}
+.dg-node.is-decision > polygon {
+  stroke: var(--dg-cyan);
+  stroke-width: 1.75;
+}
+.dg-node.is-regulatory > rect {
+  stroke: var(--dg-teal);
+  stroke-dasharray: 5 4;
+}
+.dg-node.is-azure > rect {
+  stroke: var(--dg-cyan);
+}
+.dg-node.is-process > rect {
+  stroke: var(--dg-teal);
+  stroke-dasharray: 5 4;
+}
+.dg-node.is-ghost > rect {
+  stroke: var(--dg-line);
+  stroke-dasharray: 2 4;
+}
+.dg-node[data-active] > rect,
+.dg-node[data-active] > polygon,
+.dg-node:focus-visible > rect,
+.dg-node:focus-visible > polygon {
+  fill: var(--dg-band);
+  stroke-width: 2.25;
+}
+.dg-node[data-dim] {
+  opacity: 0.28;
+}
+.dg-edge {
+  fill: none;
+  stroke: var(--dg-line);
+  stroke-width: 1.5;
+}
+.dg-edge.is-regulatory {
+  stroke: var(--dg-teal);
+  stroke-dasharray: 5 4;
+}
+.dg-arrow {
+  fill: var(--dg-line);
+}
+.dg-arrow.is-regulatory {
+  fill: var(--dg-teal);
+}
+.dg-text {
+  fill: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
 }

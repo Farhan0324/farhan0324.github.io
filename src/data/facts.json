@@ -11,10 +11,11 @@
     {
       "id": 2,
       "image": "/images/projects/ir-playbook.webp",
-      "technologies": ["NIS2", "Incident Response", "Escalation Workflows", "Regulatory Reporting"],
+      "technologies": ["Incident Response", "NIS2 Compliance", "Information Security"],
       "category": "security",
       "github": "#",
-      "demo": "#"
+      "demo": "#",
+      "page": "/projects/nis2-incident-response/"
     },
     {
       "id": 3,
@@ -27,20 +28,11 @@
     {
       "id": 4,
       "image": "/images/projects/nist-framework.webp",
-      "technologies": [
-        "NIST CSF 2.0",
-        "Microsoft Entra ID",
-        "Microsoft Intune",
-        "Microsoft Defender",
-        "Microsoft Sentinel",
-        "Microsoft Purview",
-        "Azure",
-        "SharePoint",
-        "Power BI"
-      ],
+      "technologies": ["Cybersecurity Framework", "Microsoft Security", "Risk Management", "Cloud Security"],
       "category": "security",
       "github": "#",
-      "demo": "#"
+      "demo": "#",
+      "page": "/projects/nist-csf-microsoft/"
     }
   ],
   "experience": [

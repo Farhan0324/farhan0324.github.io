@@ -27,7 +27,7 @@
       "paragraph1": "I'm a Cyber Security Engineer with over three years of experience in IT security engineering, security operations, and governance, risk and compliance (GRC) across cloud and enterprise environments.",
       "paragraph2": "Currently I work as a Cyber Security Engineer within the DevOps team at Bettermile, where I focus on detecting threats early, managing vulnerabilities end to end, and building security into development workflows rather than adding it afterwards. Before moving into security, I worked as a Software Engineer, which helps me speak the same language as development teams and turn security requirements into practical solutions."
     },
-    "mission": "My mission is to strengthen cybersecurity through practical security solutions, and I am particularly motivated by the potential of AI-driven technologies to improve threat detection, automate security processes, and enhance overall security operations.",
+    "mission": "Strengthening cybersecurity through practical security solutions. I am particularly motivated by the potential of AI-driven technologies to improve threat detection, automate security processes, and enhance overall security operations.",
     "education": {
       "heading": "Education",
       "items": [
@@ -252,40 +252,17 @@
     "items": [
       {
         "id": 4,
-        "title": "NIST CSF 2.0 Implementation",
-        "description": "Designed and implemented a cybersecurity framework based on NIST CSF 2.0 for a Microsoft-based enterprise environment, covering security governance, risk assessment, identity and access management, endpoint protection, vulnerability management, security monitoring and incident response.",
-        "features": [
-          "Mapping Across All Six CSF Functions",
-          "Risk Register & Asset Inventory",
-          "Current & Target Profiles with Gap Analysis",
-          "MFA, Conditional Access & Least Privilege",
-          "Privileged Access Reviews",
-          "Vulnerability & Remediation Workflows",
-          "Security Monitoring & Incident Response",
-          "Control Register, Roadmap & KPI Dashboard"
-        ],
-        "developmentDetails": [
-          {
-            "label": "Framework Mapping",
-            "text": "Mapped NIST CSF 2.0 requirements across the six functions: Govern, Identify, Protect, Detect, Respond and Recover."
-          },
-          {
-            "label": "Risk & Gap Analysis",
-            "text": "Developed a cybersecurity risk register, asset inventory, current and target security profiles, and a gap analysis to identify security weaknesses and prioritize remediation."
-          },
-          {
-            "label": "Technical Controls",
-            "text": "Implemented security controls with Microsoft Entra ID, Intune, Defender and Sentinel, and designed identity and access controls including MFA, Conditional Access, least privilege and privileged access reviews."
-          },
-          {
-            "label": "Vulnerability & Incident Handling",
-            "text": "Developed workflows for identifying, prioritizing, tracking and validating security findings, and established security monitoring, incident response procedures and recovery practices aligned with NIST CSF."
-          },
-          {
-            "label": "Governance & Reporting",
-            "text": "Created a security control register, implementation roadmap, evidence repository and KPI dashboard to monitor security posture and control effectiveness, supported by policies and procedures for access control, vulnerability management, incident management, business continuity, risk management, supplier security and security awareness."
-          }
-        ]
+        "title": "NIST Cybersecurity Framework 2.0 Implementation – Microsoft Environment",
+        "description": "Designed a practical implementation approach for applying NIST CSF 2.0 within a Microsoft-based enterprise environment, mapping governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery to relevant Microsoft security capabilities.",
+        "features": [],
+        "developmentDetails": []
+      },
+      {
+        "id": 2,
+        "title": "NIS2-Aligned Incident Response Playbook",
+        "description": "Developed and implemented an Incident Response Playbook aligned with NIS2 requirements, giving a structured way to identify, classify, escalate, manage and report cybersecurity incidents.",
+        "features": [],
+        "developmentDetails": []
       },
       {
         "id": 1,
@@ -312,50 +289,6 @@
           {
             "label": "Privacy",
             "text": "No account and no ads. Progress stays available offline and can be backed up."
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "NIS2-Aligned Incident Response Playbook",
-        "description": "Developed and implemented an Incident Response Playbook aligned with NIS2 requirements, establishing a structured approach for identifying, assessing, responding to and recovering from cybersecurity incidents.",
-        "features": [
-          "NIS2-Aligned Procedures",
-          "Incident Classification & Severity Levels",
-          "Escalation Procedures",
-          "Full Incident Handling Workflows",
-          "Regulatory Reporting Guidance",
-          "Roles & Responsibilities",
-          "Evidence Collection & Lessons Learned"
-        ],
-        "developmentDetails": [
-          {
-            "label": "Procedures",
-            "text": "Developed incident response procedures aligned with NIS2 cybersecurity and incident management requirements."
-          },
-          {
-            "label": "Classification & Escalation",
-            "text": "Defined incident classification, severity levels, escalation procedures and response responsibilities."
-          },
-          {
-            "label": "Incident Workflow",
-            "text": "Established incident handling workflows covering detection, analysis, containment, eradication, recovery and post-incident review."
-          },
-          {
-            "label": "Communication & Reporting",
-            "text": "Documented incident communication and escalation processes to support regulatory reporting obligations."
-          },
-          {
-            "label": "Roles & Coordination",
-            "text": "Defined incident response roles, responsibilities and coordination between security, IT and relevant stakeholders."
-          },
-          {
-            "label": "Continuous Improvement",
-            "text": "Supported incident documentation, evidence collection, lessons learned and continuous improvement."
-          },
-          {
-            "label": "Key Deliverable",
-            "text": "A NIS2-aligned Incident Response Playbook with documented incident handling procedures, escalation workflows, response responsibilities and reporting guidance."
           }
         ]
       },
@@ -477,6 +410,25 @@
       "decline": "Decline",
       "privacy": "Privacy Policy",
       "settings": "Cookie settings"
+    },
+    "project": {
+      "view": "View Project",
+      "back": "All projects",
+      "contents": "On this page",
+      "figure": "Figure",
+      "legend": "Legend",
+      "illustrative": "Illustrative",
+      "conceptual": "Conceptual",
+      "fictional": "Fictional data",
+      "hover": "Hover, tap or tab through the diagram for details.",
+      "next": "Next project",
+      "category": "Category",
+      "skills": "Skills demonstrated",
+      "tier": "Tier",
+      "current": "Current",
+      "target": "Target",
+      "gap": "Gap",
+      "priority": "Priority"
     }
   }
 }

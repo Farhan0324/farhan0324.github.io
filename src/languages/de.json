@@ -27,7 +27,7 @@
       "paragraph1": "Ich bin Cyber Security Engineer mit über drei Jahren Erfahrung in IT-Security-Engineering, Security Operations sowie Governance, Risk und Compliance (GRC) in Cloud- und Unternehmensumgebungen.",
       "paragraph2": "Derzeit arbeite ich als Cyber Security Engineer im DevOps-Team von Bettermile. Mein Fokus liegt darauf, Bedrohungen früh zu erkennen, Schwachstellen durchgängig zu managen und Sicherheit direkt in Entwicklungsprozesse einzubauen, statt sie nachträglich hinzuzufügen. Vor meinem Wechsel in die Security habe ich als Softwareentwickler gearbeitet. Dadurch spreche ich die Sprache der Entwicklungsteams und setze Sicherheitsanforderungen in praktische Lösungen um."
     },
-    "mission": "Meine Mission ist es, die Cybersicherheit durch praxisnahe Sicherheitslösungen zu stärken. Besonders motiviert mich das Potenzial KI-gestützter Technologien, die Bedrohungserkennung zu verbessern, Sicherheitsprozesse zu automatisieren und den Sicherheitsbetrieb insgesamt zu stärken.",
+    "mission": "Cybersicherheit durch praxisnahe Sicherheitslösungen stärken. Besonders motiviert mich das Potenzial KI-gestützter Technologien, die Bedrohungserkennung zu verbessern, Sicherheitsprozesse zu automatisieren und den Sicherheitsbetrieb insgesamt zu stärken.",
     "education": {
       "heading": "Ausbildung",
       "items": [
@@ -252,40 +252,17 @@
     "items": [
       {
         "id": 4,
-        "title": "Umsetzung von NIST CSF 2.0",
-        "description": "Konzeption und Umsetzung eines Cybersicherheits-Frameworks auf Basis von NIST CSF 2.0 für eine Microsoft-basierte Unternehmensumgebung, mit den Schwerpunkten Security Governance, Risikobewertung, Identitäts- und Zugriffsmanagement, Endpoint-Schutz, Schwachstellenmanagement, Security-Monitoring und Incident Response.",
-        "features": [
-          "Mapping über alle sechs CSF-Funktionen",
-          "Risikoregister & Asset-Inventar",
-          "Ist- und Soll-Profile mit Gap-Analyse",
-          "MFA, Conditional Access & Least Privilege",
-          "Überprüfung privilegierter Zugriffe",
-          "Workflows für Schwachstellen & Behebung",
-          "Security-Monitoring & Incident Response",
-          "Kontrollregister, Roadmap & KPI-Dashboard"
-        ],
-        "developmentDetails": [
-          {
-            "label": "Framework-Mapping",
-            "text": "Zuordnung der Anforderungen von NIST CSF 2.0 zu den sechs Funktionen: Govern, Identify, Protect, Detect, Respond und Recover."
-          },
-          {
-            "label": "Risiko- & Gap-Analyse",
-            "text": "Entwicklung eines Risikoregisters, eines Asset-Inventars, von Ist- und Soll-Sicherheitsprofilen sowie einer Gap-Analyse, um Sicherheitslücken zu erkennen und die Behebung zu priorisieren."
-          },
-          {
-            "label": "Technische Kontrollen",
-            "text": "Umsetzung von Sicherheitskontrollen mit Microsoft Entra ID, Intune, Defender und Sentinel sowie Konzeption von Identitäts- und Zugriffskontrollen wie MFA, Conditional Access, Least Privilege und Überprüfungen privilegierter Zugriffe."
-          },
-          {
-            "label": "Schwachstellen & Vorfälle",
-            "text": "Entwicklung von Workflows zum Erkennen, Priorisieren, Nachverfolgen und Validieren von Sicherheitsbefunden sowie Aufbau von Security-Monitoring, Incident-Response-Verfahren und Wiederherstellungspraktiken nach NIST CSF."
-          },
-          {
-            "label": "Governance & Reporting",
-            "text": "Erstellung eines Kontrollregisters, einer Umsetzungs-Roadmap, eines Nachweisarchivs und eines KPI-Dashboards zur Überwachung von Sicherheitslage und Wirksamkeit der Kontrollen, ergänzt durch Richtlinien und Verfahren für Zugriffskontrolle, Schwachstellenmanagement, Incident Management, Business Continuity, Risikomanagement, Lieferantensicherheit und Security Awareness."
-          }
-        ]
+        "title": "Umsetzung des NIST Cybersecurity Framework 2.0 – Microsoft-Umgebung",
+        "description": "Konzeption eines praxisnahen Umsetzungsansatzes für NIST CSF 2.0 in einer Microsoft-basierten Unternehmensumgebung, der Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zuordnet.",
+        "features": [],
+        "developmentDetails": []
+      },
+      {
+        "id": 2,
+        "title": "NIS2-konformes Incident-Response-Playbook",
+        "description": "Entwicklung und Umsetzung eines Incident-Response-Playbooks nach den NIS2-Anforderungen, das einen strukturierten Weg schafft, Cybersicherheitsvorfälle zu erkennen, zu klassifizieren, zu eskalieren, zu steuern und zu melden.",
+        "features": [],
+        "developmentDetails": []
       },
       {
         "id": 1,
@@ -312,50 +289,6 @@
           {
             "label": "Datenschutz",
             "text": "Kein Konto und keine Werbung. Der Fortschritt bleibt offline verfügbar und lässt sich sichern."
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "NIS2-konformes Incident-Response-Playbook",
-        "description": "Entwicklung und Umsetzung eines Incident-Response-Playbooks nach den NIS2-Anforderungen, das einen strukturierten Ansatz schafft, um Cybersicherheitsvorfälle zu erkennen, zu bewerten, darauf zu reagieren und sich davon zu erholen.",
-        "features": [
-          "NIS2-konforme Verfahren",
-          "Vorfallsklassifizierung & Schweregrade",
-          "Eskalationsverfahren",
-          "Vollständige Workflows zur Vorfallsbearbeitung",
-          "Leitfaden für behördliche Meldungen",
-          "Rollen & Verantwortlichkeiten",
-          "Beweissicherung & Lessons Learned"
-        ],
-        "developmentDetails": [
-          {
-            "label": "Verfahren",
-            "text": "Entwicklung von Incident-Response-Verfahren nach den NIS2-Anforderungen an Cybersicherheit und Vorfallsmanagement."
-          },
-          {
-            "label": "Klassifizierung & Eskalation",
-            "text": "Festlegung von Vorfallsklassifizierung, Schweregraden, Eskalationsverfahren und Verantwortlichkeiten."
-          },
-          {
-            "label": "Vorfalls-Workflow",
-            "text": "Aufbau von Workflows zur Vorfallsbearbeitung für Erkennung, Analyse, Eindämmung, Beseitigung, Wiederherstellung und Nachbereitung."
-          },
-          {
-            "label": "Kommunikation & Meldung",
-            "text": "Dokumentation der Kommunikations- und Eskalationsprozesse zur Erfüllung behördlicher Meldepflichten."
-          },
-          {
-            "label": "Rollen & Koordination",
-            "text": "Festlegung von Rollen, Verantwortlichkeiten und der Zusammenarbeit zwischen Security, IT und relevanten Stakeholdern."
-          },
-          {
-            "label": "Kontinuierliche Verbesserung",
-            "text": "Unterstützung bei Vorfallsdokumentation, Beweissicherung, Lessons Learned und kontinuierlicher Verbesserung."
-          },
-          {
-            "label": "Wichtigstes Ergebnis",
-            "text": "Ein NIS2-konformes Incident-Response-Playbook mit dokumentierten Verfahren zur Vorfallsbearbeitung, Eskalations-Workflows, Verantwortlichkeiten und Leitlinien für Meldungen."
           }
         ]
       },
@@ -477,6 +410,25 @@
       "decline": "Ablehnen",
       "privacy": "Datenschutzerklärung",
       "settings": "Cookie-Einstellungen"
+    },
+    "project": {
+      "view": "Projekt ansehen",
+      "back": "Alle Projekte",
+      "contents": "Auf dieser Seite",
+      "figure": "Abbildung",
+      "legend": "Legende",
+      "illustrative": "Beispielhaft",
+      "conceptual": "Konzeptionell",
+      "fictional": "Fiktive Daten",
+      "hover": "Für Details mit der Maus darüberfahren, tippen oder mit der Tab-Taste navigieren.",
+      "next": "Nächstes Projekt",
+      "category": "Kategorie",
+      "skills": "Gezeigte Fähigkeiten",
+      "tier": "Tier",
+      "current": "Ist",
+      "target": "Soll",
+      "gap": "Lücke",
+      "priority": "Priorität"
     }
   }
 }

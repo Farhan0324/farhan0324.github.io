@@ -5,7 +5,7 @@ import { useClock, useNow } from "../lib/hooks";
 import { EMAIL, NAME, SECTIONS, SOCIALS, TIMEZONE } from "../lib/site";
 import profile from "../data/profile.json";
 
-const Footer = () => {
+const Footer = ({ base = "" }) => {
   const { t, lang } = useTranslation();
   const time = useClock(TIMEZONE, lang === "de" ? "de-DE" : "en-GB");
   const year = useNow().getUTCFullYear();
@@ -29,7 +29,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {SECTIONS.map((s) => (
                 <li key={s.id}>
-                  <a href={`#${s.id}`} className="text-muted transition-colors hover:text-fg">
+                  <a href={`${base}#${s.id}`} className="text-muted transition-colors hover:text-fg">
                     {t(s.key)}
                   </a>
                 </li>

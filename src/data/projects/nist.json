@@ -1,0 +1,902 @@
+{
+  "en": {
+    "title": "NIST Cybersecurity Framework 2.0 Implementation – Microsoft Environment",
+    "categories": "Cybersecurity Framework | Microsoft Security | Risk Management | Cloud Security",
+    "description": "Designed a practical implementation approach for applying NIST CSF 2.0 within a Microsoft-based enterprise environment. The project maps governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery activities to relevant Microsoft security capabilities.",
+    "sections": {
+      "overview": "Overview",
+      "functions": "Six CSF functions",
+      "architecture": "Microsoft architecture",
+      "risk": "Risk register",
+      "gap": "Gap assessment",
+      "roadmap": "Roadmap",
+      "evidence": "Evidence",
+      "deliverables": "Deliverables"
+    },
+    "overview": {
+      "text": "NIST CSF 2.0, published in February 2024, is a voluntary framework that describes cybersecurity outcomes and leaves the choice of how to reach them to each organization. Organizations use it because it gives leadership and engineers one structure for discussing risk: where are we now, where do we need to be, and what comes first? Many companies already run on Microsoft 365 and Azure, so the practical question is which existing capabilities can support which outcome, and where policies and people have to do the rest. Tools alone do not achieve a CSF outcome.",
+      "provenanceTitle": "What is on this page",
+      "provenance": [
+        {
+          "label": "My work",
+          "text": "I mapped CSF 2.0 across its six functions, developed the risk register, asset inventory, current and target profiles and gap analysis, designed identity and access controls, developed vulnerability, monitoring, incident response and recovery procedures, and created the control register, roadmap, evidence repository and KPI dashboard."
+        },
+        {
+          "label": "Conceptual",
+          "text": "The architecture and roadmap show an implementation approach. They are not a picture of a deployed environment, and the product mapping is my own, not an official NIST or Microsoft mapping."
+        },
+        {
+          "label": "Illustrative",
+          "text": "The risk register uses fictional data. Gap values are examples, not assessment results."
+        }
+      ]
+    },
+    "functions": {
+      "lead": "Govern sets direction for the other five, which together cover the work before, during and after an incident.",
+      "title": "The six CSF 2.0 functions",
+      "labels": {
+        "activities": "Activities",
+        "tools": "Example Microsoft tools",
+        "evidence": "Example evidence"
+      },
+      "functions": [
+        {
+          "code": "GV",
+          "name": "Govern",
+          "summary": "Set the cybersecurity strategy, policies, roles and risk expectations, and oversee them.",
+          "activities": ["Risk management strategy", "Roles and responsibilities", "Policy and supplier oversight"],
+          "tools": ["Microsoft Purview", "Compliance Manager"],
+          "evidence": ["Approved policies", "Risk register", "Management reports"]
+        },
+        {
+          "code": "ID",
+          "name": "Identify",
+          "summary": "Understand assets, suppliers and current risks so that effort goes where it matters.",
+          "activities": ["Asset inventory", "Risk assessment", "Vulnerability visibility"],
+          "tools": ["Microsoft Defender", "Microsoft Intune"],
+          "evidence": ["Asset inventory", "Risk assessments", "Exposure reports"]
+        },
+        {
+          "code": "PR",
+          "name": "Protect",
+          "summary": "Use safeguards that reduce the likelihood and impact of an attack.",
+          "activities": ["Identity and access control", "Device configuration", "Endpoint protection"],
+          "tools": ["Microsoft Entra ID", "Microsoft Intune", "Defender for Endpoint"],
+          "evidence": ["Access reviews", "MFA and Conditional Access evidence", "Device compliance reports"]
+        },
+        {
+          "code": "DE",
+          "name": "Detect",
+          "summary": "Find possible attacks and compromises through monitoring and analysis.",
+          "activities": ["Log monitoring", "Alert analysis", "Threat detection"],
+          "tools": ["Microsoft Defender XDR", "Microsoft Sentinel"],
+          "evidence": ["Monitoring records", "Detection rule reviews"]
+        },
+        {
+          "code": "RS",
+          "name": "Respond",
+          "summary": "Take action on a detected incident: manage, analyze, contain and communicate.",
+          "activities": ["Incident investigation", "Automated response playbooks", "Escalation"],
+          "tools": ["Microsoft Defender XDR", "Microsoft Sentinel"],
+          "evidence": ["Incident records", "Post-incident reports"]
+        },
+        {
+          "code": "RC",
+          "name": "Recover",
+          "summary": "Restore affected assets and operations, and communicate during recovery.",
+          "activities": ["Recovery planning", "Backup and restore", "Business continuity"],
+          "tools": ["Azure Backup", "Azure Site Recovery"],
+          "evidence": ["Backup and recovery test reports", "Recovery plans"]
+        }
+      ]
+    },
+    "architecture": {
+      "lead": "Each column is one CSF function. Blocks that span two columns support both. Processes sit in their own lane because a product cannot replace them.",
+      "title": "Conceptual Microsoft security architecture by CSF function",
+      "note": "Conceptual, not a deployed environment. Availability depends on the licence: these products are not all included in every Microsoft plan, and Azure services are billed separately.",
+      "lanes": {
+        "tech": "Microsoft products and Azure services",
+        "process": "Organizational processes"
+      },
+      "flowLabel": "logs and alerts",
+      "functionNames": ["Govern", "Identify", "Protect", "Detect", "Respond", "Recover"],
+      "functions": [
+        {
+          "process": ["Governance policies", "Risk management documentation"]
+        },
+        {
+          "process": ["Asset inventory", "Vulnerability and exposure visibility"]
+        },
+        {
+          "process": ["Access management policy", "Privileged access procedure"]
+        },
+        {
+          "process": ["Security alerts", "Log monitoring", "Threat detection"]
+        },
+        {
+          "process": ["Incident investigation", "Automated response playbooks", "Incident escalation"]
+        },
+        {
+          "process": ["Recovery planning", "Business continuity procedures"]
+        }
+      ],
+      "tiles": {
+        "purview": {
+          "name": "Microsoft Purview",
+          "sub": "Data governance",
+          "kind": "product",
+          "text": "Data classification, retention and compliance tooling."
+        },
+        "compliance": {
+          "name": "Compliance Manager",
+          "sub": "Part of Purview",
+          "kind": "product",
+          "text": "Tracks controls and improvement actions against regulations and standards."
+        },
+        "defender": {
+          "name": "Microsoft Defender",
+          "sub": "Exposure visibility",
+          "kind": "product",
+          "text": "Device discovery and vulnerability visibility."
+        },
+        "entra": {
+          "name": "Microsoft Entra ID",
+          "sub": "MFA, Conditional Access, PIM",
+          "kind": "product",
+          "text": "Identity, multi-factor authentication, access policies and just-in-time privileged roles."
+        },
+        "intune": {
+          "name": "Microsoft Intune",
+          "sub": "Device inventory, compliance and configuration",
+          "kind": "product",
+          "text": "Knows which devices exist and enforces how they are configured."
+        },
+        "mde": {
+          "name": "Defender for Endpoint",
+          "sub": "Endpoint protection",
+          "kind": "product",
+          "text": "Protection, detection and response on devices."
+        },
+        "xdr": {
+          "name": "Microsoft Defender XDR",
+          "sub": "Correlated incidents across endpoint, identity, email and cloud apps",
+          "kind": "product",
+          "text": "Combines signals from the Defender products into incidents."
+        },
+        "sentinel": {
+          "name": "Microsoft Sentinel",
+          "sub": "SIEM, analytics, investigation and automated playbooks",
+          "kind": "product",
+          "text": "Collects logs, runs analytics rules and automates response."
+        },
+        "backup": {
+          "name": "Azure Backup",
+          "sub": "Azure service",
+          "kind": "azure",
+          "text": "Backup of workloads and data."
+        },
+        "asr": {
+          "name": "Azure Site Recovery",
+          "sub": "Azure service",
+          "kind": "azure",
+          "text": "Replication and failover for disaster recovery."
+        }
+      }
+    },
+    "legend": {
+      "product": "Microsoft security product",
+      "azure": "Azure service",
+      "process": "Organizational process"
+    },
+    "register": {
+      "lead": "The format is what matters here: every risk has an asset, a rating, a mitigation and a named owner. All entries are fictional.",
+      "title": "Example risk register",
+      "columns": [
+        "Risk ID",
+        "Asset",
+        "Risk description",
+        "Likelihood",
+        "Impact",
+        "Risk level",
+        "Mitigation",
+        "Risk owner",
+        "Status"
+      ],
+      "levels": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "rows": [
+        {
+          "id": "R-01",
+          "asset": "Admin accounts",
+          "risk": "Privileged account taken over through phishing",
+          "likelihood": "medium",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "Phishing-resistant MFA, just-in-time admin roles",
+          "owner": "IT Security Lead",
+          "status": "In progress"
+        },
+        {
+          "id": "R-02",
+          "asset": "Company laptops",
+          "risk": "Unmanaged device reaches company data",
+          "likelihood": "medium",
+          "impact": "medium",
+          "level": "medium",
+          "mitigation": "Device compliance as an access condition",
+          "owner": "IT Operations Lead",
+          "status": "Planned"
+        },
+        {
+          "id": "R-03",
+          "asset": "Customer web app",
+          "risk": "Known vulnerability unpatched past target date",
+          "likelihood": "high",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "Remediation deadlines and regular scanning",
+          "owner": "Application Owner",
+          "status": "In progress"
+        },
+        {
+          "id": "R-04",
+          "asset": "Email",
+          "risk": "Payment fraud through a compromised mailbox",
+          "likelihood": "medium",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "Email protection, payment approval process",
+          "owner": "Finance Lead",
+          "status": "Open"
+        },
+        {
+          "id": "R-05",
+          "asset": "File storage",
+          "risk": "Ransomware makes business data unavailable",
+          "likelihood": "low",
+          "impact": "high",
+          "level": "medium",
+          "mitigation": "Isolated backups and restore tests",
+          "owner": "IT Operations Lead",
+          "status": "Planned"
+        },
+        {
+          "id": "R-06",
+          "asset": "Supplier access",
+          "risk": "Third-party remote access stays active after a project ends",
+          "likelihood": "medium",
+          "impact": "low",
+          "level": "low",
+          "mitigation": "Periodic access reviews",
+          "owner": "Compliance Lead",
+          "status": "Open"
+        }
+      ]
+    },
+    "gap": {
+      "lead": "A CSF Profile compares where an organization is with where it needs to be. The biggest gap is not always the first job: priority comes from the gap combined with business risk.",
+      "title": "Current and target state by domain",
+      "note": "Illustrative values, not assessment results. The scale uses the four CSF Tiers.",
+      "tiers": ["Partial", "Risk Informed", "Repeatable", "Adaptive"],
+      "rows": [
+        {
+          "name": "Identity and Access Management",
+          "current": 2,
+          "target": 4,
+          "priority": "High"
+        },
+        {
+          "name": "Endpoint Security",
+          "current": 2,
+          "target": 3,
+          "priority": "Medium"
+        },
+        {
+          "name": "Vulnerability Management",
+          "current": 1,
+          "target": 3,
+          "priority": "High"
+        },
+        {
+          "name": "Security Monitoring",
+          "current": 2,
+          "target": 3,
+          "priority": "High"
+        },
+        {
+          "name": "Incident Response",
+          "current": 1,
+          "target": 3,
+          "priority": "High"
+        },
+        {
+          "name": "Backup and Recovery",
+          "current": 2,
+          "target": 3,
+          "priority": "Medium"
+        },
+        {
+          "name": "Governance and Compliance",
+          "current": 2,
+          "target": 3,
+          "priority": "Medium"
+        }
+      ]
+    },
+    "roadmap": {
+      "lead": "Six phases in a sensible order. Timing depends on the organization, so none is given.",
+      "title": "Implementation roadmap",
+      "phaseLabel": "Phase",
+      "phases": [
+        {
+          "title": "Assessment and Scope",
+          "text": "Agree scope, stakeholders and the current profile.",
+          "fns": "GV"
+        },
+        {
+          "title": "Asset Inventory and Risk Assessment",
+          "text": "Know what exists and what could go wrong.",
+          "fns": "GV · ID"
+        },
+        {
+          "title": "Security Controls and Protection",
+          "text": "Identity, devices and data first.",
+          "fns": "PR"
+        },
+        {
+          "title": "Detection and Monitoring",
+          "text": "Connect log sources and tune alerts.",
+          "fns": "DE"
+        },
+        {
+          "title": "Incident Response and Recovery",
+          "text": "Write the procedures, then test them.",
+          "fns": "RS · RC"
+        },
+        {
+          "title": "Continuous Improvement",
+          "text": "Review KPIs and update the profiles.",
+          "fns": "GV → all"
+        }
+      ]
+    },
+    "evidence": {
+      "lead": "Examples of what an organization could keep to show that controls exist and work. Codes are the related CSF 2.0 categories.",
+      "items": [
+        {
+          "label": "Security policies",
+          "code": "GV.PO"
+        },
+        {
+          "label": "Asset inventory",
+          "code": "ID.AM"
+        },
+        {
+          "label": "Risk register",
+          "code": "GV.RM · ID.RA"
+        },
+        {
+          "label": "Access reviews",
+          "code": "PR.AA"
+        },
+        {
+          "label": "MFA and Conditional Access evidence",
+          "code": "PR.AA"
+        },
+        {
+          "label": "Vulnerability reports",
+          "code": "ID.RA"
+        },
+        {
+          "label": "Security monitoring records",
+          "code": "DE.CM"
+        },
+        {
+          "label": "Incident response documentation",
+          "code": "RS.MA"
+        },
+        {
+          "label": "Backup and recovery test reports",
+          "code": "RC.RP"
+        },
+        {
+          "label": "Compliance and control assessments",
+          "code": "GV.OV"
+        }
+      ]
+    },
+    "deliverables": [
+      {
+        "title": "NIST CSF 2.0 Mapping",
+        "text": "Requirements mapped across all six functions."
+      },
+      {
+        "title": "Microsoft Security Architecture",
+        "text": "Conceptual view of tools and processes by function."
+      },
+      {
+        "title": "Risk Register",
+        "text": "Risks with ratings, mitigations and owners."
+      },
+      {
+        "title": "Gap Assessment",
+        "text": "Current and target profiles with priorities."
+      },
+      {
+        "title": "Security Implementation Roadmap",
+        "text": "Six phases from scope to improvement."
+      },
+      {
+        "title": "Security Monitoring and Reporting",
+        "text": "Evidence repository and KPI dashboard."
+      }
+    ],
+    "skills": [
+      "NIST CSF 2.0",
+      "Risk Management",
+      "Gap Analysis",
+      "Microsoft Entra ID",
+      "Microsoft Intune",
+      "Microsoft Defender",
+      "Microsoft Sentinel",
+      "Microsoft Purview",
+      "Azure",
+      "Power BI"
+    ]
+  },
+  "de": {
+    "title": "Umsetzung des NIST Cybersecurity Framework 2.0 – Microsoft-Umgebung",
+    "categories": "Cybersecurity Framework | Microsoft Security | Risikomanagement | Cloud-Sicherheit",
+    "description": "Konzeption eines praxisnahen Umsetzungsansatzes für NIST CSF 2.0 in einer Microsoft-basierten Unternehmensumgebung. Das Projekt ordnet Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zu.",
+    "sections": {
+      "overview": "Überblick",
+      "functions": "Sechs CSF-Funktionen",
+      "architecture": "Microsoft-Architektur",
+      "risk": "Risikoregister",
+      "gap": "Gap-Analyse",
+      "roadmap": "Roadmap",
+      "evidence": "Nachweise",
+      "deliverables": "Ergebnisse"
+    },
+    "overview": {
+      "text": "NIST CSF 2.0, veröffentlicht im Februar 2024, ist ein freiwilliges Framework. Es beschreibt Ergebnisse der Cybersicherheit und überlässt jeder Organisation, wie sie diese erreicht. Organisationen nutzen es, weil Führung und Technik damit dieselbe Struktur für Risiken haben: Wo stehen wir, wo müssen wir hin, und was kommt zuerst? Viele Unternehmen arbeiten bereits mit Microsoft 365 und Azure. Die praktische Frage lautet also, welche vorhandenen Funktionen welches Ergebnis unterstützen und wo Richtlinien und Menschen den Rest leisten müssen. Tools allein erreichen kein CSF-Ergebnis.",
+      "provenanceTitle": "Was diese Seite zeigt",
+      "provenance": [
+        {
+          "label": "Meine Arbeit",
+          "text": "Ich habe CSF 2.0 über die sechs Funktionen abgebildet, Risikoregister, Asset-Inventar, Ist- und Soll-Profile und Gap-Analyse entwickelt, Identitäts- und Zugriffskontrollen konzipiert, Verfahren für Schwachstellen, Monitoring, Incident Response und Wiederherstellung entwickelt sowie Kontrollregister, Roadmap, Nachweisarchiv und KPI-Dashboard erstellt."
+        },
+        {
+          "label": "Konzeptionell",
+          "text": "Architektur und Roadmap zeigen einen Umsetzungsansatz. Sie bilden keine laufende Umgebung ab, und die Produktzuordnung ist meine eigene, keine offizielle Zuordnung von NIST oder Microsoft."
+        },
+        {
+          "label": "Beispielhaft",
+          "text": "Das Risikoregister verwendet fiktive Daten. Die Gap-Werte sind Beispiele, keine Bewertungsergebnisse."
+        }
+      ]
+    },
+    "functions": {
+      "lead": "Govern gibt den anderen fünf Funktionen die Richtung vor. Zusammen decken sie die Arbeit vor, während und nach einem Vorfall ab.",
+      "title": "Die sechs Funktionen von CSF 2.0",
+      "labels": {
+        "activities": "Aktivitäten",
+        "tools": "Beispielhafte Microsoft-Tools",
+        "evidence": "Beispielhafte Nachweise"
+      },
+      "functions": [
+        {
+          "code": "GV",
+          "name": "Govern",
+          "summary": "Cybersicherheitsstrategie, Richtlinien, Rollen und Risikoerwartungen festlegen und überwachen.",
+          "activities": [
+            "Risikomanagement-Strategie",
+            "Rollen und Verantwortlichkeiten",
+            "Richtlinien und Lieferantenaufsicht"
+          ],
+          "tools": ["Microsoft Purview", "Compliance Manager"],
+          "evidence": ["Freigegebene Richtlinien", "Risikoregister", "Management-Berichte"]
+        },
+        {
+          "code": "ID",
+          "name": "Identify",
+          "summary": "Assets, Lieferanten und aktuelle Risiken verstehen, damit der Aufwand dort landet, wo er zählt.",
+          "activities": ["Asset-Inventar", "Risikobewertung", "Sichtbarkeit von Schwachstellen"],
+          "tools": ["Microsoft Defender", "Microsoft Intune"],
+          "evidence": ["Asset-Inventar", "Risikobewertungen", "Berichte zur Angriffsfläche"]
+        },
+        {
+          "code": "PR",
+          "name": "Protect",
+          "summary": "Schutzmaßnahmen nutzen, die Wahrscheinlichkeit und Auswirkung eines Angriffs senken.",
+          "activities": ["Identitäts- und Zugriffskontrolle", "Gerätekonfiguration", "Endpoint-Schutz"],
+          "tools": ["Microsoft Entra ID", "Microsoft Intune", "Defender for Endpoint"],
+          "evidence": ["Zugriffsprüfungen", "Nachweise zu MFA und Conditional Access", "Berichte zur Gerätekonformität"]
+        },
+        {
+          "code": "DE",
+          "name": "Detect",
+          "summary": "Mögliche Angriffe und Kompromittierungen durch Monitoring und Analyse finden.",
+          "activities": ["Log-Monitoring", "Alarmanalyse", "Bedrohungserkennung"],
+          "tools": ["Microsoft Defender XDR", "Microsoft Sentinel"],
+          "evidence": ["Monitoring-Aufzeichnungen", "Prüfungen der Erkennungsregeln"]
+        },
+        {
+          "code": "RS",
+          "name": "Respond",
+          "summary": "Auf einen erkannten Vorfall reagieren: steuern, analysieren, eindämmen und kommunizieren.",
+          "activities": ["Vorfallsuntersuchung", "Automatisierte Response-Playbooks", "Eskalation"],
+          "tools": ["Microsoft Defender XDR", "Microsoft Sentinel"],
+          "evidence": ["Vorfallsakten", "Abschlussberichte zu Vorfällen"]
+        },
+        {
+          "code": "RC",
+          "name": "Recover",
+          "summary": "Betroffene Assets und Abläufe wiederherstellen und währenddessen kommunizieren.",
+          "activities": ["Wiederherstellungsplanung", "Backup und Restore", "Business Continuity"],
+          "tools": ["Azure Backup", "Azure Site Recovery"],
+          "evidence": ["Berichte zu Backup- und Wiederherstellungstests", "Wiederherstellungspläne"]
+        }
+      ]
+    },
+    "architecture": {
+      "lead": "Jede Spalte ist eine CSF-Funktion. Blöcke über zwei Spalten unterstützen beide. Prozesse stehen in einer eigenen Spur, weil kein Produkt sie ersetzen kann.",
+      "title": "Konzeptionelle Microsoft-Sicherheitsarchitektur nach CSF-Funktion",
+      "note": "Konzeptionell, keine laufende Umgebung. Die Verfügbarkeit hängt von der Lizenz ab: Diese Produkte sind nicht in jedem Microsoft-Plan enthalten, und Azure-Dienste werden separat abgerechnet.",
+      "lanes": {
+        "tech": "Microsoft-Produkte und Azure-Dienste",
+        "process": "Organisatorische Prozesse"
+      },
+      "flowLabel": "Logs und Alarme",
+      "functionNames": ["Govern", "Identify", "Protect", "Detect", "Respond", "Recover"],
+      "functions": [
+        {
+          "process": ["Governance-Richtlinien", "Risikomanagement-Dokumentation"]
+        },
+        {
+          "process": ["Asset-Inventar", "Sichtbarkeit von Schwachstellen und Angriffsfläche"]
+        },
+        {
+          "process": ["Richtlinie zum Zugriffsmanagement", "Verfahren für privilegierte Zugriffe"]
+        },
+        {
+          "process": ["Sicherheitsalarme", "Log-Monitoring", "Bedrohungserkennung"]
+        },
+        {
+          "process": ["Vorfallsuntersuchung", "Automatisierte Response-Playbooks", "Vorfallseskalation"]
+        },
+        {
+          "process": ["Wiederherstellungsplanung", "Business-Continuity-Verfahren"]
+        }
+      ],
+      "tiles": {
+        "purview": {
+          "name": "Microsoft Purview",
+          "sub": "Data Governance",
+          "kind": "product",
+          "text": "Datenklassifizierung, Aufbewahrung und Compliance-Werkzeuge."
+        },
+        "compliance": {
+          "name": "Compliance Manager",
+          "sub": "Teil von Purview",
+          "kind": "product",
+          "text": "Verfolgt Kontrollen und Verbesserungsmaßnahmen zu Vorschriften und Standards."
+        },
+        "defender": {
+          "name": "Microsoft Defender",
+          "sub": "Sichtbarkeit der Angriffsfläche",
+          "kind": "product",
+          "text": "Geräteerkennung und Sichtbarkeit von Schwachstellen."
+        },
+        "entra": {
+          "name": "Microsoft Entra ID",
+          "sub": "MFA, Conditional Access, PIM",
+          "kind": "product",
+          "text": "Identitäten, Multi-Faktor-Authentifizierung, Zugriffsrichtlinien und privilegierte Rollen nach Bedarf."
+        },
+        "intune": {
+          "name": "Microsoft Intune",
+          "sub": "Geräteinventar, Konformität und Konfiguration",
+          "kind": "product",
+          "text": "Weiß, welche Geräte es gibt, und setzt deren Konfiguration durch."
+        },
+        "mde": {
+          "name": "Defender for Endpoint",
+          "sub": "Endpoint-Schutz",
+          "kind": "product",
+          "text": "Schutz, Erkennung und Reaktion auf Geräten."
+        },
+        "xdr": {
+          "name": "Microsoft Defender XDR",
+          "sub": "Korrelierte Vorfälle über Endpoint, Identität, E-Mail und Cloud-Apps",
+          "kind": "product",
+          "text": "Führt Signale der Defender-Produkte zu Vorfällen zusammen."
+        },
+        "sentinel": {
+          "name": "Microsoft Sentinel",
+          "sub": "SIEM, Analysen, Untersuchung und automatisierte Playbooks",
+          "kind": "product",
+          "text": "Sammelt Logs, führt Analyseregeln aus und automatisiert die Reaktion."
+        },
+        "backup": {
+          "name": "Azure Backup",
+          "sub": "Azure-Dienst",
+          "kind": "azure",
+          "text": "Sicherung von Workloads und Daten."
+        },
+        "asr": {
+          "name": "Azure Site Recovery",
+          "sub": "Azure-Dienst",
+          "kind": "azure",
+          "text": "Replikation und Failover für die Notfallwiederherstellung."
+        }
+      }
+    },
+    "legend": {
+      "product": "Microsoft-Sicherheitsprodukt",
+      "azure": "Azure-Dienst",
+      "process": "Organisatorischer Prozess"
+    },
+    "register": {
+      "lead": "Hier zählt das Format: Jedes Risiko hat ein Asset, eine Bewertung, eine Maßnahme und einen benannten Verantwortlichen. Alle Einträge sind fiktiv.",
+      "title": "Beispielhaftes Risikoregister",
+      "columns": [
+        "Risiko-ID",
+        "Asset",
+        "Risikobeschreibung",
+        "Wahrscheinlichkeit",
+        "Auswirkung",
+        "Risikostufe",
+        "Maßnahme",
+        "Risikoverantwortung",
+        "Status"
+      ],
+      "levels": {
+        "low": "Niedrig",
+        "medium": "Mittel",
+        "high": "Hoch"
+      },
+      "rows": [
+        {
+          "id": "R-01",
+          "asset": "Admin-Konten",
+          "risk": "Übernahme eines privilegierten Kontos durch Phishing",
+          "likelihood": "medium",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "Phishing-resistente MFA, Admin-Rollen nach Bedarf",
+          "owner": "IT-Security-Leitung",
+          "status": "In Arbeit"
+        },
+        {
+          "id": "R-02",
+          "asset": "Firmen-Laptops",
+          "risk": "Nicht verwaltetes Gerät greift auf Firmendaten zu",
+          "likelihood": "medium",
+          "impact": "medium",
+          "level": "medium",
+          "mitigation": "Gerätekonformität als Zugriffsbedingung",
+          "owner": "IT-Betriebsleitung",
+          "status": "Geplant"
+        },
+        {
+          "id": "R-03",
+          "asset": "Kunden-Webanwendung",
+          "risk": "Bekannte Schwachstelle nach Zieltermin nicht behoben",
+          "likelihood": "high",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "Behebungsfristen und regelmäßige Scans",
+          "owner": "Application Owner",
+          "status": "In Arbeit"
+        },
+        {
+          "id": "R-04",
+          "asset": "E-Mail",
+          "risk": "Zahlungsbetrug über ein kompromittiertes Postfach",
+          "likelihood": "medium",
+          "impact": "high",
+          "level": "high",
+          "mitigation": "E-Mail-Schutz, Freigabeprozess für Zahlungen",
+          "owner": "Finanzleitung",
+          "status": "Offen"
+        },
+        {
+          "id": "R-05",
+          "asset": "Dateiablage",
+          "risk": "Ransomware macht Geschäftsdaten unzugänglich",
+          "likelihood": "low",
+          "impact": "high",
+          "level": "medium",
+          "mitigation": "Isolierte Backups und Restore-Tests",
+          "owner": "IT-Betriebsleitung",
+          "status": "Geplant"
+        },
+        {
+          "id": "R-06",
+          "asset": "Lieferantenzugriff",
+          "risk": "Fernzugriff Dritter bleibt nach Projektende aktiv",
+          "likelihood": "medium",
+          "impact": "low",
+          "level": "low",
+          "mitigation": "Regelmäßige Zugriffsprüfungen",
+          "owner": "Compliance-Leitung",
+          "status": "Offen"
+        }
+      ]
+    },
+    "gap": {
+      "lead": "Ein CSF-Profil vergleicht, wo eine Organisation steht und wo sie hinmuss. Die größte Lücke ist nicht immer die erste Aufgabe: Die Priorität ergibt sich aus der Lücke zusammen mit dem Geschäftsrisiko.",
+      "title": "Ist- und Soll-Zustand nach Bereich",
+      "note": "Beispielwerte, keine Bewertungsergebnisse. Die Skala nutzt die vier CSF-Tiers.",
+      "tiers": ["Partial", "Risk Informed", "Repeatable", "Adaptive"],
+      "rows": [
+        {
+          "name": "Identitäts- und Zugriffsmanagement",
+          "current": 2,
+          "target": 4,
+          "priority": "Hoch"
+        },
+        {
+          "name": "Endpoint-Sicherheit",
+          "current": 2,
+          "target": 3,
+          "priority": "Mittel"
+        },
+        {
+          "name": "Schwachstellenmanagement",
+          "current": 1,
+          "target": 3,
+          "priority": "Hoch"
+        },
+        {
+          "name": "Security-Monitoring",
+          "current": 2,
+          "target": 3,
+          "priority": "Hoch"
+        },
+        {
+          "name": "Incident Response",
+          "current": 1,
+          "target": 3,
+          "priority": "Hoch"
+        },
+        {
+          "name": "Backup und Wiederherstellung",
+          "current": 2,
+          "target": 3,
+          "priority": "Mittel"
+        },
+        {
+          "name": "Governance und Compliance",
+          "current": 2,
+          "target": 3,
+          "priority": "Mittel"
+        }
+      ]
+    },
+    "roadmap": {
+      "lead": "Sechs Phasen in sinnvoller Reihenfolge. Die Dauer hängt von der Organisation ab, deshalb steht hier keine.",
+      "title": "Umsetzungs-Roadmap",
+      "phaseLabel": "Phase",
+      "phases": [
+        {
+          "title": "Bewertung und Scope",
+          "text": "Umfang, Beteiligte und Ist-Profil abstimmen.",
+          "fns": "GV"
+        },
+        {
+          "title": "Asset-Inventar und Risikobewertung",
+          "text": "Wissen, was existiert und was schiefgehen kann.",
+          "fns": "GV · ID"
+        },
+        {
+          "title": "Sicherheitskontrollen und Schutz",
+          "text": "Zuerst Identitäten, Geräte und Daten.",
+          "fns": "PR"
+        },
+        {
+          "title": "Erkennung und Monitoring",
+          "text": "Log-Quellen anbinden und Alarme abstimmen.",
+          "fns": "DE"
+        },
+        {
+          "title": "Incident Response und Wiederherstellung",
+          "text": "Verfahren schreiben, dann testen.",
+          "fns": "RS · RC"
+        },
+        {
+          "title": "Kontinuierliche Verbesserung",
+          "text": "KPIs prüfen und Profile aktualisieren.",
+          "fns": "GV → alle"
+        }
+      ]
+    },
+    "evidence": {
+      "lead": "Beispiele dafür, was eine Organisation aufbewahren kann, um zu zeigen, dass Kontrollen existieren und wirken. Die Codes sind die zugehörigen Kategorien von CSF 2.0.",
+      "items": [
+        {
+          "label": "Sicherheitsrichtlinien",
+          "code": "GV.PO"
+        },
+        {
+          "label": "Asset-Inventar",
+          "code": "ID.AM"
+        },
+        {
+          "label": "Risikoregister",
+          "code": "GV.RM · ID.RA"
+        },
+        {
+          "label": "Zugriffsprüfungen",
+          "code": "PR.AA"
+        },
+        {
+          "label": "Nachweise zu MFA und Conditional Access",
+          "code": "PR.AA"
+        },
+        {
+          "label": "Schwachstellenberichte",
+          "code": "ID.RA"
+        },
+        {
+          "label": "Monitoring-Aufzeichnungen",
+          "code": "DE.CM"
+        },
+        {
+          "label": "Incident-Response-Dokumentation",
+          "code": "RS.MA"
+        },
+        {
+          "label": "Berichte zu Backup- und Wiederherstellungstests",
+          "code": "RC.RP"
+        },
+        {
+          "label": "Compliance- und Kontrollbewertungen",
+          "code": "GV.OV"
+        }
+      ]
+    },
+    "deliverables": [
+      {
+        "title": "NIST-CSF-2.0-Zuordnung",
+        "text": "Anforderungen über alle sechs Funktionen abgebildet."
+      },
+      {
+        "title": "Microsoft-Sicherheitsarchitektur",
+        "text": "Konzeptionelle Sicht auf Tools und Prozesse je Funktion."
+      },
+      {
+        "title": "Risikoregister",
+        "text": "Risiken mit Bewertung, Maßnahme und Verantwortung."
+      },
+      {
+        "title": "Gap-Analyse",
+        "text": "Ist- und Soll-Profile mit Prioritäten."
+      },
+      {
+        "title": "Umsetzungs-Roadmap",
+        "text": "Sechs Phasen vom Scope bis zur Verbesserung."
+      },
+      {
+        "title": "Monitoring und Reporting",
+        "text": "Nachweisarchiv und KPI-Dashboard."
+      }
+    ],
+    "skills": [
+      "NIST CSF 2.0",
+      "Risikomanagement",
+      "Gap-Analyse",
+      "Microsoft Entra ID",
+      "Microsoft Intune",
+      "Microsoft Defender",
+      "Microsoft Sentinel",
+      "Microsoft Purview",
+      "Azure",
+      "Power BI"
+    ]
+  }
+}

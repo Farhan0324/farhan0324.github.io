@@ -37,6 +37,15 @@ for (const [key, value] of enLeaves) {
   }
 }
 
+// Project pages keep both languages in one file and must stay in step too.
+for (const file of ["nis2", "nist"]) {
+  const page = read(`src/data/projects/${file}.json`);
+  const german = new Map(leaves(page.de));
+  for (const [key] of leaves(page.en)) if (!german.has(key)) errors.push(`${file}.json: missing in de: ${key}`);
+  const english = new Map(leaves(page.en));
+  for (const key of german.keys()) if (!english.has(key)) errors.push(`${file}.json: missing in en: ${key}`);
+}
+
 // Every translation key used in the code must exist.
 const source = walk("src").filter((file) => /\.jsx?$/.test(file));
 for (const file of source) {
@@ -82,10 +91,12 @@ const textFiles = [...walk("src"), ...walk("public"), "index.html"].filter((file
 );
 
 // Placeholders are allowed while drafting, so they are listed, not treated as errors.
-const todos = textFiles.flatMap((file) => {
-  const found = fs.readFileSync(file, "utf8").match(/\[[A-Z][^\]\n"]*\]|your\.email@example\.com/g) || [];
-  return found.length ? [`${String(found.length).padStart(3)}  ${file}`] : [];
-});
+const todos = textFiles
+  .filter((file) => !/\.jsx?$/.test(file))
+  .flatMap((file) => {
+    const found = fs.readFileSync(file, "utf8").match(/\[[A-Z][^\]\n"]*\]|your\.email@example\.com/g) || [];
+    return found.length ? [`${String(found.length).padStart(3)}  ${file}`] : [];
+  });
 if (todos.length) console.warn(`Placeholders still to fill in:\n${todos.join("\n")}\n`);
 
 if (errors.length) {

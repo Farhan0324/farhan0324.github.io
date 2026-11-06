@@ -68,6 +68,37 @@ try {
     assert.equal(await page.locator("#projects article").count(), 1);
   });
 
+  for (const [slug, heading] of [
+    ["nist-csf-microsoft", /NIST Cybersecurity Framework/],
+    ["nis2-incident-response", /Incident Response Playbook/],
+  ]) {
+    await check(`${slug} page renders at every width`, async () => {
+      for (const width of [390, 820, 1440]) {
+        const page = await openPage({ path: `projects/${slug}/`, viewport: { width, height: 900 } });
+        assert.match(await page.locator("h1").innerText(), heading);
+        assert.equal((await page.locator("figure").count()) >= 4, true);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px`);
+      }
+    });
+
+    await check(`${slug} page has no accessibility violations`, async () => {
+      for (const colorScheme of ["dark", "light"]) {
+        const page = await openPage({ path: `projects/${slug}/`, colorScheme, reducedMotion: "reduce" });
+        await page.addScriptTag({ content: axeSource });
+        const violations = await page.evaluate(async () =>
+          (await window.axe.run(document)).violations.map((v) => `${v.id} x${v.nodes.length}: ${v.nodes[0].target}`),
+        );
+        assert.deepEqual(violations, []);
+      }
+    });
+  }
+
+  await check("project cards link to their pages", async () => {
+    const page = await openPage();
+    assert.equal((await page.locator('#projects a[href="/projects/nist-csf-microsoft/"]').count()) > 0, true);
+    assert.equal((await page.locator('#projects a[href="/projects/nis2-incident-response/"]').count()) > 0, true);
+  });
+
   await check("command menu navigates", async () => {
     const page = await openPage();
     await page.keyboard.press("Control+k");

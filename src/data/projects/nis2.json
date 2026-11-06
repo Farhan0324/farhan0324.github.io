@@ -1,0 +1,620 @@
+{
+  "en": {
+    "title": "NIS2-Aligned Incident Response Playbook",
+    "categories": "Incident Response | NIS2 Compliance | Information Security",
+    "description": "Developed and implemented an Incident Response Playbook aligned with NIS2 requirements to establish a structured approach for identifying, classifying, escalating, managing and reporting cybersecurity incidents.",
+    "sections": {
+      "overview": "Overview",
+      "lifecycle": "Incident lifecycle",
+      "classification": "Classification and escalation",
+      "roles": "Roles",
+      "reporting": "NIS2 reporting",
+      "documentation": "Documentation",
+      "deliverables": "Deliverables"
+    },
+    "overview": {
+      "text": "An incident is a bad moment to work out who decides what. A playbook settles that in advance: how an event gets classified, who is called, when management and legal step in, and what has to be written down. Under the NIS2 Directive (EU) 2022/2555, entities in scope also have to report significant incidents within fixed deadlines, so the process has to start that clock reliably. A playbook supports these obligations. On its own it does not make an organization compliant.",
+      "provenanceTitle": "What is on this page",
+      "provenance": [
+        {
+          "label": "My work",
+          "text": "I developed the playbook and its procedures: incident classification, severity levels, escalation, handling workflows from detection to post-incident review, communication and reporting processes, roles, and documentation and evidence requirements."
+        },
+        {
+          "label": "Conceptual",
+          "text": "The diagrams are my own summaries of the process. They do not show the internal setup of any organization."
+        },
+        {
+          "label": "Illustrative",
+          "text": "Severity levels and the escalation reach are example categories. Each organization has to set its own. No real incidents or results are shown."
+        }
+      ]
+    },
+    "lifecycle": {
+      "lead": "Thirteen steps from first signal to lessons learned. The key decision comes right after severity assessment: is this a significant incident? If yes, escalation and the reporting track run alongside the response.",
+      "title": "Incident response lifecycle",
+      "phases": [
+        "A  DETECT AND ASSESS",
+        "B  CONTAIN AND INVESTIGATE",
+        "C  ERADICATE AND RECOVER",
+        "D  REPORT AND IMPROVE",
+        "E  REGULATORY TRACK, SIGNIFICANT INCIDENTS ONLY"
+      ],
+      "yes": "Yes",
+      "no": "No: standard handling",
+      "steps": [
+        {
+          "title": "Incident detection",
+          "text": "An alert, a user report or a third party signals a possible incident."
+        },
+        {
+          "title": "Initial assessment",
+          "text": "Confirm whether it is a real security event and what seems to be affected."
+        },
+        {
+          "title": "Incident classification",
+          "text": "Assign the incident type, for example malware, account compromise or data exposure."
+        },
+        {
+          "title": "Severity assessment",
+          "text": "Rate impact and urgency to set the severity level."
+        },
+        {
+          "title": "Response team activation",
+          "text": "Bring in the people the severity level calls for and name an incident lead."
+        },
+        {
+          "title": "Containment",
+          "text": "Stop the spread while keeping evidence intact."
+        },
+        {
+          "title": "Investigation and evidence collection",
+          "text": "Establish what happened and record evidence with a clear chain of custody."
+        },
+        {
+          "title": "Eradication",
+          "text": "Remove the cause, such as malware, compromised accounts or the exploited weakness."
+        },
+        {
+          "title": "Recovery and validation",
+          "text": "Restore services and confirm that they are clean and working."
+        },
+        {
+          "title": "Reporting and stakeholder communication",
+          "text": "Keep management, affected parties and, where required, authorities informed."
+        },
+        {
+          "title": "Post-incident review",
+          "text": "Go through the timeline and decisions while they are still fresh."
+        },
+        {
+          "title": "Root cause analysis",
+          "text": "Find out why it was possible, not only what happened."
+        },
+        {
+          "title": "Lessons learned and improvement",
+          "text": "Turn findings into owned actions for controls and for the playbook."
+        }
+      ],
+      "decision": {
+        "title": "Significant incident?",
+        "text": "NIS2 treats an incident as significant if it has caused or could cause severe operational disruption or financial loss, or considerable damage to others."
+      },
+      "loop": {
+        "title": "Updated playbook feeds step 01",
+        "text": "Improvements go back into detection and the playbook itself."
+      },
+      "track": [
+        {
+          "title": "Escalate to management and legal",
+          "text": "They confirm the assessment and own the notification decision."
+        },
+        {
+          "title": "Early warning, 24 h",
+          "text": "Sent to the CSIRT or competent authority."
+        },
+        {
+          "title": "Notification, 72 h",
+          "text": "Updates the early warning with an initial assessment."
+        },
+        {
+          "title": "Intermediate report, on request",
+          "text": "Status updates if the CSIRT or authority asks for them."
+        },
+        {
+          "title": "Final report, 1 month",
+          "text": "Due one month after the incident notification and feeds into step 10."
+        }
+      ]
+    },
+    "legend": {
+      "step": "Process step",
+      "decision": "Decision",
+      "regulatory": "Regulatory reporting",
+      "loop": "Feedback"
+    },
+    "matrix": {
+      "lead": "Severity comes from two questions: how bad is the impact, and how quickly does it need action? Severity is separate from the NIS2 significance test, although the two are usually assessed together.",
+      "title": "Severity matrix",
+      "note": "Illustrative categories. Every organization should define its own criteria, levels and response expectations.",
+      "impactLabel": "Impact",
+      "urgencyLabel": "Urgency",
+      "impact": ["Severe", "Major", "Moderate", "Minor"],
+      "urgency": ["Low", "Medium", "High"],
+      "levels": [
+        {
+          "name": "Low",
+          "text": "Minor security event requiring standard handling.",
+          "handling": "Handled by the security or IT team through normal processes."
+        },
+        {
+          "name": "Medium",
+          "text": "Limited impact requiring investigation and remediation.",
+          "handling": "Security team investigates, and the incident lead is informed."
+        },
+        {
+          "name": "High",
+          "text": "Serious security incident requiring urgent response.",
+          "handling": "Response team activated, and management informed."
+        },
+        {
+          "name": "Critical",
+          "text": "Major disruption, severe impact or significant compromise.",
+          "handling": "Full response with management and legal involved from the start."
+        }
+      ]
+    },
+    "escalation": {
+      "title": "Escalation path by severity",
+      "note": "Illustrative. An incident of any level goes down the regulatory path as soon as it meets the significance criteria.",
+      "roles": ["Security / IT team", "Incident lead", "Management", "Legal / Compliance", "CSIRT or authority"],
+      "paths": [
+        {
+          "name": "Low",
+          "reach": 1,
+          "note": "Standard handling"
+        },
+        {
+          "name": "Medium",
+          "reach": 2,
+          "note": "Incident lead informed"
+        },
+        {
+          "name": "High",
+          "reach": 3,
+          "note": "Management informed"
+        },
+        {
+          "name": "Critical",
+          "reach": 4,
+          "note": "Legal and compliance involved"
+        },
+        {
+          "name": "Significant",
+          "reach": 5,
+          "note": "Reporting clock running",
+          "regulatory": true
+        }
+      ]
+    },
+    "rolesTable": {
+      "lead": "Clear ownership means nobody has to negotiate responsibilities during an incident.",
+      "roleHead": "Role",
+      "dutyHead": "Responsibility",
+      "roles": [
+        {
+          "name": "Incident Response Lead",
+          "duty": "Coordinates the response, makes operational decisions and keeps the incident record current."
+        },
+        {
+          "name": "IT / Security Team",
+          "duty": "Investigates, contains and eradicates, restores systems and collects technical evidence."
+        },
+        {
+          "name": "Management",
+          "duty": "Takes business decisions, approves resources and carries overall accountability."
+        },
+        {
+          "name": "Legal / Compliance",
+          "duty": "Assesses regulatory and contractual duties and reviews notifications before they go out."
+        },
+        {
+          "name": "Communications",
+          "duty": "Handles internal and external messages so that people hear one consistent account."
+        },
+        {
+          "name": "Relevant External Parties",
+          "duty": "Authorities, CSIRTs, suppliers, forensic support or insurers, involved as the case requires."
+        }
+      ]
+    },
+    "timeline": {
+      "lead": "For significant incidents, Article 23 of NIS2 sets out staged reporting. The first deadlines count from the moment the entity becomes aware of the incident.",
+      "title": "NIS2 reporting stages for significant incidents",
+      "note": "Not to scale. These are the Directive's milestones. If an incident is still ongoing when the final report is due, a progress report is submitted, followed by a final report within one month of the incident being handled. The applicable national law, reporting authority and channel must always be verified.",
+      "stages": [
+        {
+          "when": "T0",
+          "title": "Awareness",
+          "text": "The entity becomes aware of the significant incident."
+        },
+        {
+          "when": "≤ 24 h",
+          "title": "Early warning",
+          "text": "Says whether malicious acts are suspected and whether there may be cross-border impact."
+        },
+        {
+          "when": "≤ 72 h",
+          "title": "Incident notification",
+          "text": "Updates the warning with an initial assessment, severity, impact and indicators of compromise where available."
+        },
+        {
+          "when": "On request",
+          "title": "Intermediate report",
+          "text": "Relevant status updates when the CSIRT or authority asks.",
+          "optional": true
+        },
+        {
+          "when": "≤ 1 month",
+          "title": "Final report",
+          "text": "Counted from the notification. Covers description, likely root cause, measures taken and any cross-border impact."
+        }
+      ]
+    },
+    "documentation": {
+      "lead": "Records kept while an incident is handled. They support decisions at the time and the review and reporting afterwards.",
+      "items": [
+        "Incident record",
+        "Severity classification",
+        "Incident timeline",
+        "Investigation findings",
+        "Evidence log",
+        "Containment and remediation actions",
+        "Communication record",
+        "Post-incident report"
+      ]
+    },
+    "deliverables": [
+      {
+        "title": "Incident Response Playbook",
+        "text": "Procedures from detection to post-incident review."
+      },
+      {
+        "title": "Incident Classification Matrix",
+        "text": "Types and severity levels based on impact and urgency."
+      },
+      {
+        "title": "Escalation Workflow",
+        "text": "Who is involved at which level, and when."
+      },
+      {
+        "title": "Incident Reporting Process",
+        "text": "Guidance on internal communication and regulatory reporting."
+      },
+      {
+        "title": "Post-Incident Review Template",
+        "text": "Timeline, root cause, lessons learned and follow-up actions."
+      }
+    ],
+    "skills": [
+      "NIS2",
+      "Incident Response",
+      "Incident Management",
+      "Risk Assessment",
+      "Security Operations",
+      "Incident Classification",
+      "Regulatory Reporting",
+      "Root Cause Analysis",
+      "Documentation"
+    ]
+  },
+  "de": {
+    "title": "NIS2-konformes Incident-Response-Playbook",
+    "categories": "Incident Response | NIS2-Compliance | Informationssicherheit",
+    "description": "Entwicklung und Umsetzung eines Incident-Response-Playbooks nach den NIS2-Anforderungen, das einen strukturierten Ansatz schafft, um Cybersicherheitsvorfälle zu erkennen, zu klassifizieren, zu eskalieren, zu steuern und zu melden.",
+    "sections": {
+      "overview": "Überblick",
+      "lifecycle": "Vorfalls-Lebenszyklus",
+      "classification": "Klassifizierung und Eskalation",
+      "roles": "Rollen",
+      "reporting": "NIS2-Meldungen",
+      "documentation": "Dokumentation",
+      "deliverables": "Ergebnisse"
+    },
+    "overview": {
+      "text": "Während eines Vorfalls ist der falsche Zeitpunkt, um zu klären, wer was entscheidet. Ein Playbook regelt das im Voraus: wie ein Ereignis eingestuft wird, wer gerufen wird, wann Management und Rechtsabteilung einbezogen werden und was dokumentiert werden muss. Nach der NIS2-Richtlinie (EU) 2022/2555 müssen betroffene Einrichtungen erhebliche Sicherheitsvorfälle außerdem innerhalb fester Fristen melden, der Prozess muss diese Fristen also zuverlässig auslösen. Ein Playbook unterstützt diese Pflichten. Allein macht es eine Organisation nicht NIS2-konform.",
+      "provenanceTitle": "Was diese Seite zeigt",
+      "provenance": [
+        {
+          "label": "Meine Arbeit",
+          "text": "Ich habe das Playbook und seine Verfahren entwickelt: Vorfallsklassifizierung, Schweregrade, Eskalation, Abläufe von der Erkennung bis zur Nachbereitung, Kommunikations- und Meldeprozesse, Rollen sowie Anforderungen an Dokumentation und Beweissicherung."
+        },
+        {
+          "label": "Konzeptionell",
+          "text": "Die Diagramme sind meine eigenen Zusammenfassungen des Prozesses. Sie zeigen nicht den internen Aufbau einer bestimmten Organisation."
+        },
+        {
+          "label": "Beispielhaft",
+          "text": "Schweregrade und Eskalationsstufen sind Beispielkategorien. Jede Organisation muss eigene festlegen. Es werden keine echten Vorfälle oder Ergebnisse gezeigt."
+        }
+      ]
+    },
+    "lifecycle": {
+      "lead": "Dreizehn Schritte vom ersten Signal bis zu den Lessons Learned. Die wichtigste Entscheidung folgt direkt auf die Schweregradbewertung: Handelt es sich um einen erheblichen Sicherheitsvorfall? Wenn ja, laufen Eskalation und Meldungen parallel zur Reaktion.",
+      "title": "Lebenszyklus der Vorfallsreaktion",
+      "phases": [
+        "A  ERKENNEN UND BEWERTEN",
+        "B  EINDÄMMEN UND UNTERSUCHEN",
+        "C  BESEITIGEN UND WIEDERHERSTELLEN",
+        "D  MELDEN UND VERBESSERN",
+        "E  MELDEWEG, NUR ERHEBLICHE VORFÄLLE"
+      ],
+      "yes": "Ja",
+      "no": "Nein: Standardablauf",
+      "steps": [
+        {
+          "title": "Vorfallserkennung",
+          "text": "Ein Alarm, eine Nutzermeldung oder ein Dritter weist auf einen möglichen Vorfall hin."
+        },
+        {
+          "title": "Erstbewertung",
+          "text": "Prüfen, ob es ein echtes Sicherheitsereignis ist und was betroffen zu sein scheint."
+        },
+        {
+          "title": "Vorfalls-Klassifizierung",
+          "text": "Den Vorfallstyp zuordnen, zum Beispiel Malware, Kontokompromittierung oder Datenabfluss."
+        },
+        {
+          "title": "Schweregrad-Bewertung",
+          "text": "Auswirkung und Dringlichkeit bewerten und daraus den Schweregrad ableiten."
+        },
+        {
+          "title": "Aktivierung des Response-Teams",
+          "text": "Die nötigen Personen einbinden und eine Vorfallsleitung benennen."
+        },
+        {
+          "title": "Eindämmung",
+          "text": "Die Ausbreitung stoppen und dabei Beweise erhalten."
+        },
+        {
+          "title": "Untersuchung und Beweissicherung",
+          "text": "Klären, was passiert ist, und Beweise mit klarer Nachweiskette sichern."
+        },
+        {
+          "title": "Beseitigung",
+          "text": "Die Ursache entfernen, etwa Malware, kompromittierte Konten oder die ausgenutzte Schwachstelle."
+        },
+        {
+          "title": "Wiederherstellung und Validierung",
+          "text": "Dienste wiederherstellen und prüfen, dass sie sauber und funktionsfähig sind."
+        },
+        {
+          "title": "Meldung und Stakeholder-Kommunikation",
+          "text": "Management, Betroffene und, wo nötig, Behörden informiert halten."
+        },
+        {
+          "title": "Nachbereitung",
+          "text": "Zeitablauf und Entscheidungen durchgehen, solange sie frisch sind."
+        },
+        {
+          "title": "Ursachenanalyse",
+          "text": "Klären, warum es möglich war, nicht nur, was passiert ist."
+        },
+        {
+          "title": "Lessons Learned und Verbesserung",
+          "text": "Erkenntnisse in zugewiesene Maßnahmen für Kontrollen und Playbook überführen."
+        }
+      ],
+      "decision": {
+        "title": "Erheblicher Vorfall?",
+        "text": "Nach NIS2 ist ein Vorfall erheblich, wenn er schwere Betriebsstörungen oder finanzielle Verluste verursacht hat oder verursachen kann oder andere erheblich schädigt oder schädigen kann."
+      },
+      "loop": {
+        "title": "Aktualisiertes Playbook fließt in Schritt 01",
+        "text": "Verbesserungen gehen zurück in die Erkennung und in das Playbook selbst."
+      },
+      "track": [
+        {
+          "title": "Eskalation an Management und Recht",
+          "text": "Sie bestätigen die Bewertung und verantworten die Meldeentscheidung."
+        },
+        {
+          "title": "Frühwarnung, 24 Std.",
+          "text": "Geht an das CSIRT oder die zuständige Behörde."
+        },
+        {
+          "title": "Meldung, 72 Std.",
+          "text": "Aktualisiert die Frühwarnung um eine erste Bewertung."
+        },
+        {
+          "title": "Zwischenbericht, auf Anfrage",
+          "text": "Statusaktualisierungen, wenn CSIRT oder Behörde sie anfordern."
+        },
+        {
+          "title": "Abschlussbericht, 1 Monat",
+          "text": "Fällig einen Monat nach der Vorfallsmeldung, fließt in Schritt 10 ein."
+        }
+      ]
+    },
+    "legend": {
+      "step": "Prozessschritt",
+      "decision": "Entscheidung",
+      "regulatory": "Behördliche Meldung",
+      "loop": "Rückkopplung"
+    },
+    "matrix": {
+      "lead": "Der Schweregrad ergibt sich aus zwei Fragen: Wie schwer ist die Auswirkung, und wie schnell muss gehandelt werden? Er ist von der NIS2-Erheblichkeitsprüfung getrennt, auch wenn beides meist zusammen bewertet wird.",
+      "title": "Schweregrad-Matrix",
+      "note": "Beispielhafte Kategorien. Jede Organisation sollte eigene Kriterien, Stufen und Reaktionserwartungen festlegen.",
+      "impactLabel": "Auswirkung",
+      "urgencyLabel": "Dringlichkeit",
+      "impact": ["Schwer", "Hoch", "Mittel", "Gering"],
+      "urgency": ["Niedrig", "Mittel", "Hoch"],
+      "levels": [
+        {
+          "name": "Niedrig",
+          "text": "Geringfügiges Sicherheitsereignis mit Standardbearbeitung.",
+          "handling": "Bearbeitung durch das Security- oder IT-Team in normalen Prozessen."
+        },
+        {
+          "name": "Mittel",
+          "text": "Begrenzte Auswirkung, Untersuchung und Behebung erforderlich.",
+          "handling": "Das Security-Team untersucht, die Vorfallsleitung wird informiert."
+        },
+        {
+          "name": "Hoch",
+          "text": "Ernster Sicherheitsvorfall, der eine dringende Reaktion erfordert.",
+          "handling": "Das Response-Team wird aktiviert, das Management informiert."
+        },
+        {
+          "name": "Kritisch",
+          "text": "Schwere Störung, schwere Auswirkung oder erhebliche Kompromittierung.",
+          "handling": "Volle Reaktion mit Management und Recht von Anfang an."
+        }
+      ]
+    },
+    "escalation": {
+      "title": "Eskalationsweg nach Schweregrad",
+      "note": "Beispielhaft. Ein Vorfall jeder Stufe geht in den Meldeweg, sobald er die Erheblichkeitskriterien erfüllt.",
+      "roles": ["Security- / IT-Team", "Vorfallsleitung", "Management", "Recht / Compliance", "CSIRT oder Behörde"],
+      "paths": [
+        {
+          "name": "Niedrig",
+          "reach": 1,
+          "note": "Standardablauf"
+        },
+        {
+          "name": "Mittel",
+          "reach": 2,
+          "note": "Vorfallsleitung informiert"
+        },
+        {
+          "name": "Hoch",
+          "reach": 3,
+          "note": "Management informiert"
+        },
+        {
+          "name": "Kritisch",
+          "reach": 4,
+          "note": "Recht und Compliance eingebunden"
+        },
+        {
+          "name": "Erheblich",
+          "reach": 5,
+          "note": "Meldefristen laufen",
+          "regulatory": true
+        }
+      ]
+    },
+    "rolesTable": {
+      "lead": "Klare Zuständigkeiten sorgen dafür, dass während eines Vorfalls niemand Verantwortung aushandeln muss.",
+      "roleHead": "Rolle",
+      "dutyHead": "Verantwortung",
+      "roles": [
+        {
+          "name": "Incident Response Lead",
+          "duty": "Koordiniert die Reaktion, trifft operative Entscheidungen und hält die Vorfallsakte aktuell."
+        },
+        {
+          "name": "IT- / Security-Team",
+          "duty": "Untersucht, dämmt ein, beseitigt, stellt Systeme wieder her und sichert technische Beweise."
+        },
+        {
+          "name": "Management",
+          "duty": "Trifft geschäftliche Entscheidungen, gibt Ressourcen frei und trägt die Gesamtverantwortung."
+        },
+        {
+          "name": "Recht / Compliance",
+          "duty": "Bewertet gesetzliche und vertragliche Pflichten und prüft Meldungen vor dem Versand."
+        },
+        {
+          "name": "Kommunikation",
+          "duty": "Steuert interne und externe Botschaften, damit alle dieselbe Darstellung hören."
+        },
+        {
+          "name": "Relevante externe Parteien",
+          "duty": "Behörden, CSIRTs, Lieferanten, Forensik-Dienstleister oder Versicherer, je nach Fall."
+        }
+      ]
+    },
+    "timeline": {
+      "lead": "Für erhebliche Sicherheitsvorfälle legt Artikel 23 der NIS2-Richtlinie gestufte Meldungen fest. Die ersten Fristen beginnen, sobald die Einrichtung Kenntnis von dem Vorfall erlangt.",
+      "title": "NIS2-Meldestufen für erhebliche Sicherheitsvorfälle",
+      "note": "Nicht maßstabsgetreu. Dies sind die Fristen der Richtlinie. Läuft ein Vorfall zum Zeitpunkt des Abschlussberichts noch, wird ein Fortschrittsbericht eingereicht und der Abschlussbericht innerhalb eines Monats nach Abschluss der Bearbeitung nachgereicht. Das geltende nationale Recht, die zuständige Behörde und der Meldeweg sind immer zu prüfen.",
+      "stages": [
+        {
+          "when": "T0",
+          "title": "Kenntnisnahme",
+          "text": "Die Einrichtung erlangt Kenntnis von dem erheblichen Sicherheitsvorfall."
+        },
+        {
+          "when": "≤ 24 Std.",
+          "title": "Frühwarnung",
+          "text": "Gibt an, ob ein böswilliges Handeln vermutet wird und grenzüberschreitende Auswirkungen möglich sind."
+        },
+        {
+          "when": "≤ 72 Std.",
+          "title": "Vorfallsmeldung",
+          "text": "Aktualisiert die Warnung um eine erste Bewertung, Schweregrad, Auswirkungen und, soweit verfügbar, Kompromittierungsindikatoren."
+        },
+        {
+          "when": "Auf Anfrage",
+          "title": "Zwischenbericht",
+          "text": "Relevante Statusaktualisierungen, wenn CSIRT oder Behörde sie anfordern.",
+          "optional": true
+        },
+        {
+          "when": "≤ 1 Monat",
+          "title": "Abschlussbericht",
+          "text": "Gerechnet ab der Vorfallsmeldung. Enthält Beschreibung, wahrscheinliche Ursache, Maßnahmen und grenzüberschreitende Auswirkungen."
+        }
+      ]
+    },
+    "documentation": {
+      "lead": "Aufzeichnungen während der Vorfallsbearbeitung. Sie stützen Entscheidungen im Moment und die spätere Nachbereitung und Meldung.",
+      "items": [
+        "Vorfallsakte",
+        "Schweregrad-Einstufung",
+        "Vorfalls-Zeitablauf",
+        "Untersuchungsergebnisse",
+        "Beweisprotokoll",
+        "Eindämmungs- und Behebungsmaßnahmen",
+        "Kommunikationsprotokoll",
+        "Abschlussbericht zum Vorfall"
+      ]
+    },
+    "deliverables": [
+      {
+        "title": "Incident-Response-Playbook",
+        "text": "Verfahren von der Erkennung bis zur Nachbereitung."
+      },
+      {
+        "title": "Klassifizierungsmatrix",
+        "text": "Vorfallstypen und Schweregrade nach Auswirkung und Dringlichkeit."
+      },
+      {
+        "title": "Eskalations-Workflow",
+        "text": "Wer auf welcher Stufe wann eingebunden wird."
+      },
+      {
+        "title": "Meldeprozess",
+        "text": "Leitfaden für interne Kommunikation und behördliche Meldungen."
+      },
+      {
+        "title": "Vorlage für die Nachbereitung",
+        "text": "Zeitablauf, Ursache, Lessons Learned und Folgemaßnahmen."
+      }
+    ],
+    "skills": [
+      "NIS2",
+      "Incident Response",
+      "Incident Management",
+      "Risikobewertung",
+      "Security Operations",
+      "Vorfallsklassifizierung",
+      "Behördliche Meldungen",
+      "Ursachenanalyse",
+      "Dokumentation"
+    ]
+  }
+}

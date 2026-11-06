@@ -19,6 +19,8 @@ npm run test:smoke     # browser checks (run the build first)
 | Name, email, location, links, skills, stats, resume | `src/data/profile.json` |
 | Bio, job history text, project text (English / German) | `src/languages/en.json`, `src/languages/de.json` |
 | Dates, company names, project images and links | `src/data/facts.json` |
+| Project pages: all text, both languages | `src/data/projects/nis2.json`, `src/data/projects/nist.json` |
+| Project diagrams | `src/components/doc/Nis2Diagrams.jsx`, `src/components/doc/NistDiagrams.jsx` |
 | Privacy details | `public/privacy/index.html` |
 | Emails sent by the contact form (pasted into EmailJS) | `src/AutoReply.tmpl`, `src/ContactNotification.tmpl` |
 

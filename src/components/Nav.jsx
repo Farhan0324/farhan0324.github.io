@@ -20,7 +20,7 @@ const ThemeToggle = () => {
   );
 };
 
-const Nav = ({ onOpenCommand }) => {
+const Nav = ({ onOpenCommand, base = "" }) => {
   const { t } = useTranslation();
   const active = useActiveSection(TRACKED_IDS);
   const [scrolled, setScrolled] = useState(false);
@@ -97,7 +97,7 @@ const Nav = ({ onOpenCommand }) => {
           }`}
         >
           <a
-            href="#top"
+            href={`${base}#top`}
             className="group flex items-center gap-2.5 rounded-full pr-2"
             onClick={() => setMenuOpen(false)}
           >
@@ -117,7 +117,7 @@ const Nav = ({ onOpenCommand }) => {
             {SECTIONS.map(({ id, key }) => (
               <li key={id}>
                 <a
-                  href={`#${id}`}
+                  href={`${base}#${id}`}
                   aria-current={active === id ? "true" : undefined}
                   className={`relative block rounded-full px-3.5 py-1.5 text-sm transition-colors ${
                     active === id ? "text-fg" : "text-muted hover:text-fg"
@@ -130,19 +130,21 @@ const Nav = ({ onOpenCommand }) => {
           </ul>
 
           <div className="flex items-center gap-1">
-            <button
-              type="button"
-              onClick={onOpenCommand}
-              title={t("ui.cmd.open")}
-              className="hidden h-9 items-center gap-2 rounded-full border border-line px-3 text-xs text-muted transition-colors hover:border-line-strong hover:text-fg sm:flex"
-            >
-              <Icon name="search" className="size-3.5" />
-              <span className="sr-only">{t("ui.cmd.open")}</span>
-              <span className="flex gap-0.5 pointer-coarse:hidden" aria-hidden="true">
-                <kbd className="kbd">{isMac ? "⌘" : "Ctrl"}</kbd>
-                <kbd className="kbd">K</kbd>
-              </span>
-            </button>
+            {onOpenCommand && (
+              <button
+                type="button"
+                onClick={onOpenCommand}
+                title={t("ui.cmd.open")}
+                className="hidden h-9 items-center gap-2 rounded-full border border-line px-3 text-xs text-muted transition-colors hover:border-line-strong hover:text-fg sm:flex"
+              >
+                <Icon name="search" className="size-3.5" />
+                <span className="sr-only">{t("ui.cmd.open")}</span>
+                <span className="flex gap-0.5 pointer-coarse:hidden" aria-hidden="true">
+                  <kbd className="kbd">{isMac ? "⌘" : "Ctrl"}</kbd>
+                  <kbd className="kbd">K</kbd>
+                </span>
+              </button>
+            )}
             <LanguageSwitcher className="hidden sm:flex" />
             <ThemeToggle />
             <button
@@ -175,7 +177,7 @@ const Nav = ({ onOpenCommand }) => {
                 style={{ transitionDelay: menuOpen ? `${80 + i * 50}ms` : "0ms" }}
               >
                 <a
-                  href={`#${id}`}
+                  href={`${base}#${id}`}
                   onClick={() => setMenuOpen(false)}
                   className="flex items-baseline gap-4 border-b border-line py-4 text-4xl font-semibold tracking-tight"
                 >
@@ -187,17 +189,19 @@ const Nav = ({ onOpenCommand }) => {
           </ul>
           <div className="flex items-center justify-between">
             <LanguageSwitcher />
-            <button
-              type="button"
-              onClick={() => {
-                setMenuOpen(false);
-                onOpenCommand();
-              }}
-              className="btn btn-ghost"
-            >
-              <Icon name="command" className="size-4" />
-              {t("ui.cmd.open")}
-            </button>
+            {onOpenCommand && (
+              <button
+                type="button"
+                onClick={() => {
+                  setMenuOpen(false);
+                  onOpenCommand();
+                }}
+                className="btn btn-ghost"
+              >
+                <Icon name="command" className="size-4" />
+                {t("ui.cmd.open")}
+              </button>
+            )}
           </div>
         </div>
       </div>

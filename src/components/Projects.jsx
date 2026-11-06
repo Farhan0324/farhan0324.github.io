@@ -44,11 +44,33 @@ const withGridTransition = (grid, update) => {
 
 const matchesFilter = (p, id) => (id === "all" ? true : id === "public" ? !isPrivateRepo(p.github) : p.category === id);
 
-const ProjectCard = ({ project, index, onOpen, featured = false }) => {
+const ProjectCard = ({ project, index, onOpen, featured = false, wide = false }) => {
   const { t } = useTranslation();
   const reveal = useReveal();
   const isPrivate = isPrivateRepo(project.github);
   const extra = project.technologies.length - 4;
+  const previewClass = `relative block aspect-16/10 overflow-hidden rounded-[1.1rem] bg-fg/5 ${featured ? "lg:w-3/5 lg:shrink-0" : ""}`;
+  const preview = (
+    <>
+      <img
+        src={project.image}
+        srcSet={`${project.image.replace(/\.webp$/, "-640.webp")} 640w, ${project.image} 1200w`}
+        sizes={
+          featured ? "(min-width: 1024px) 660px, 100vw" : "(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+        }
+        alt=""
+        loading="lazy"
+        decoding="async"
+        width="1200"
+        height="800"
+        className={`size-full transition-transform duration-700 ease-out-expo group-hover:scale-[1.04] ${project.page ? "bg-[#0e1a2b] object-contain" : "object-cover"}`}
+      />
+      <span className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <span className="absolute bottom-3 right-3 flex size-10 translate-y-2 items-center justify-center rounded-full bg-white text-black opacity-0 shadow-lg transition-all duration-500 ease-out-expo group-hover:translate-y-0 group-hover:opacity-100">
+        <Icon name="arrowUpRight" />
+      </span>
+    </>
+  );
 
   return (
     <article
@@ -56,41 +78,37 @@ const ProjectCard = ({ project, index, onOpen, featured = false }) => {
       onPointerMove={spotlight}
       style={{ "--delay": `${(index % 3) * 70}ms`, "--vt": `project-${project.id}` }}
       className={`project-card card spotlight group flex flex-col overflow-hidden p-2 transition-colors duration-300 hover:border-line-strong ${
-        featured ? "sm:col-span-2 lg:col-span-3 lg:flex-row" : ""
+        featured ? "sm:col-span-2 lg:col-span-6 lg:flex-row" : wide ? "lg:col-span-3" : "lg:col-span-2"
       }`}
     >
-      <button
-        type="button"
-        onClick={() => onOpen(project)}
-        className={`relative block aspect-16/10 overflow-hidden rounded-[1.1rem] bg-fg/5 ${featured ? "lg:w-3/5 lg:shrink-0" : ""}`}
-        aria-label={`${t("ui.projects.details")}: ${project.title}`}
-      >
-        <img
-          src={project.image}
-          srcSet={`${project.image.replace(/\.webp$/, "-640.webp")} 640w, ${project.image} 1200w`}
-          sizes={
-            featured ? "(min-width: 1024px) 660px, 100vw" : "(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
-          }
-          alt=""
-          loading="lazy"
-          decoding="async"
-          width="1200"
-          height="800"
-          className="size-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-[1.04]"
-        />
-        <span className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-        <span className="absolute bottom-3 right-3 flex size-10 translate-y-2 items-center justify-center rounded-full bg-white text-black opacity-0 shadow-lg transition-all duration-500 ease-out-expo group-hover:translate-y-0 group-hover:opacity-100">
-          <Icon name="arrowUpRight" />
-        </span>
-      </button>
+      {project.page ? (
+        <a href={project.page} tabIndex={-1} aria-hidden="true" className={previewClass}>
+          {preview}
+        </a>
+      ) : (
+        <button
+          type="button"
+          onClick={() => onOpen(project)}
+          className={previewClass}
+          aria-label={`${t("ui.projects.details")}: ${project.title}`}
+        >
+          {preview}
+        </button>
+      )}
 
       <div className={`flex flex-1 flex-col px-4 pb-4 pt-5 ${featured ? "lg:justify-center lg:px-8" : ""}`}>
         {featured && <p className="eyebrow mb-4">{t("ui.projects.featured")}</p>}
         <div className="flex items-start justify-between gap-3">
           <h3 className={`font-semibold leading-snug tracking-tight ${featured ? "text-2xl lg:text-3xl" : "text-lg"}`}>
-            {project.title}
+            {project.page ? (
+              <a href={project.page} className="transition-colors hover:text-accent">
+                {project.title}
+              </a>
+            ) : (
+              project.title
+            )}
           </h3>
-          {isPrivate ? (
+          {project.page ? null : isPrivate ? (
             <span className="mt-1 shrink-0 text-subtle" title={t("ui.projects.private")}>
               <Icon name="lock" className="size-4" />
             </span>
@@ -118,6 +136,13 @@ const ProjectCard = ({ project, index, onOpen, featured = false }) => {
           ))}
           {extra > 0 && <li className="chip">+{extra}</li>}
         </ul>
+        {project.page && (
+          <a href={project.page} className="btn btn-ghost group/view mt-6 self-start">
+            {t("ui.project.view")}
+            <span className="sr-only">: {project.title}</span>
+            <Icon name="arrowRight" className="size-4 transition-transform group-hover/view:translate-x-0.5" />
+          </a>
+        )}
       </div>
     </article>
   );
@@ -303,14 +328,15 @@ const Projects = () => {
           })}
         </div>
 
-        <div ref={gridRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div ref={gridRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {visible.map((project, i) => (
             <ProjectCard
               key={project.id}
               project={project}
               index={i}
               onOpen={openProject}
-              featured={filter === "all" && i === 0}
+              featured={filter === "all" && Boolean(project.page)}
+              wide={filter === "all"}
             />
           ))}
         </div>

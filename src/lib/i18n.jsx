@@ -109,6 +109,7 @@ export const TranslationProvider = ({ children, initialLang = DEFAULT_LANG, pref
 
   // The tab title and description follow the language; index.html holds the English defaults.
   useEffect(() => {
+    if (window.location.pathname !== "/") return; // project pages set their own
     document.title = t("ui.meta.title");
     document.querySelector('meta[name="description"]')?.setAttribute("content", t("ui.meta.description"));
   }, [t]);

@@ -17,7 +17,7 @@ import { SECTIONS } from "./lib/site";
 const TRACKED_SECTIONS = ["top", ...SECTIONS.map((s) => s.id)];
 
 /** Fixed decorative backdrop: fading grid, accent glow and film grain. */
-const Backdrop = () => (
+export const Backdrop = () => (
   <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
     <div className="bg-grid absolute inset-0" />
     <div className="absolute -top-48 left-1/2 h-144 w-240 -translate-x-1/2 rounded-full bg-accent/20 blur-[120px] dark:bg-accent/15" />
