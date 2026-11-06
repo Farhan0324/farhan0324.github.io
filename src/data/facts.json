@@ -23,14 +23,40 @@
       "category": "other",
       "github": "https://github.com/Farhan0324/farhan0324.github.io",
       "demo": "https://farhan0324.github.io/"
+    },
+    {
+      "id": 4,
+      "image": "/images/projects/nist-framework.webp",
+      "technologies": ["NIST", "Microsoft Tools"],
+      "category": "other",
+      "github": "#",
+      "demo": "#"
     }
   ],
   "experience": [
     {
-      "company": "Bettermile",
+      "company": "Bettermile GmbH",
       "website": "",
-      "startDate": null,
+      "startDate": "2025-01-01",
       "endDate": null
+    },
+    {
+      "company": "Engel & Völkers Digital Invest",
+      "website": "",
+      "startDate": "2023-12-01",
+      "endDate": "2024-12-01"
+    },
+    {
+      "company": "Flip GmbH",
+      "website": "",
+      "startDate": "2023-04-01",
+      "endDate": "2023-09-01"
+    },
+    {
+      "company": "Global Software Consulting",
+      "website": "",
+      "startDate": "2020-03-01",
+      "endDate": "2022-05-01"
     }
   ],
   "expertise": [

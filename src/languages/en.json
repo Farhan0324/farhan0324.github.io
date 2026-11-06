@@ -1,7 +1,7 @@
 {
   "hero": {
     "role": "Cyber Security Engineer",
-    "summary": "I'm a Security Engineer with over two years of experience in IT security engineering, security operations and GRC across cloud and enterprise environments, backed by a software engineering background in secure development.",
+    "summary": "I'm a Cyber Security Engineer with over three years of experience in IT security engineering, security operations and GRC across cloud and enterprise environments, backed by a software engineering background in secure development.",
     "buttons": {
       "projects": "Projects",
       "experience": "Experience",
@@ -23,10 +23,32 @@
       "experience_snapshot": "Snapshot"
     },
     "intro": {
-      "paragraph1": "I'm a Security Engineer with over two years of experience in IT security engineering, security operations, and governance, risk and compliance (GRC) across cloud and enterprise environments.",
-      "paragraph2": "Currently I work as a Security Engineer within the DevOps team at Bettermile, where I focus on detecting threats early, managing vulnerabilities end to end, and building security into development workflows rather than adding it afterwards. Before moving into security, I worked as a Software Engineer, which helps me speak the same language as development teams and turn security requirements into practical solutions."
+      "paragraph1": "I'm a Cyber Security Engineer with over three years of experience in IT security engineering, security operations, and governance, risk and compliance (GRC) across cloud and enterprise environments.",
+      "paragraph2": "Currently I work as a Cyber Security Engineer within the DevOps team at Bettermile, where I focus on detecting threats early, managing vulnerabilities end to end, and building security into development workflows rather than adding it afterwards. Before moving into security, I worked as a Software Engineer, which helps me speak the same language as development teams and turn security requirements into practical solutions."
     },
-    "mission": "I want to detect threats earlier and build security in from the start, and I'm especially interested in how AI-driven technologies can strengthen cybersecurity."
+    "mission": "I want to detect threats earlier and build security in from the start, and I'm especially interested in how AI-driven technologies can strengthen cybersecurity.",
+    "education": {
+      "heading": "Education",
+      "items": [
+        {
+          "degree": "Master of Science in Cyber Security",
+          "school": "Brandenburg Technical University, Cottbus, Germany",
+          "period": "Sep 2022 – Feb 2027"
+        },
+        {
+          "degree": "Bachelor of Science in Computer Science",
+          "school": "University of Engineering and Technology, Taxila, Pakistan",
+          "period": "Aug 2015 – Aug 2019"
+        }
+      ],
+      "training_heading": "Training & Certifications",
+      "training": [
+        "AWS Certified Security – Specialty (SCS-003), in progress",
+        "Cyber Security Compliance Framework & System Administration",
+        "Cybersecurity Foundations: Governance, Risk and Compliance (GRC)",
+        "CompTIA Security+ (SY0-601) Cert Prep: Threats, Attacks & Vulnerabilities"
+      ]
+    }
   },
   "workExperience": {
     "badge": "Career Timeline",
@@ -43,15 +65,55 @@
     "entries": [
       {
         "location": "Berlin, Germany",
-        "role": "Security Engineer",
-        "summary": "Security engineering within the DevOps team, focused on detecting threats early, managing vulnerabilities end to end, and building security into development workflows.",
+        "role": "Cyber Security Engineer",
+        "summary": "Security monitoring, incident response and vulnerability management across cloud and enterprise environments, working within the DevOps team.",
         "highlights": [
-          "Security monitoring, event analysis and alert triage.",
-          "Incident response across the full lifecycle, from detection and investigation to containment, remediation and post-incident improvements.",
-          "Vulnerability lifecycle management, from scanning to validated remediation.",
-          "ISMS development and maintenance aligned with ISO 27001, BSI IT-Grundschutz, NIS2 and NIST CSF."
+          "Monitor security systems and analyze security events to identify suspicious activity, anomalies and potential threats.",
+          "Analyze threat intelligence and attack patterns to identify potential attack vectors and support proactive defense.",
+          "Develop and coordinate incident response playbooks and emergency plans, managing incidents through investigation, escalation, documentation and post-incident improvements, aligned with NIS2 reporting requirements.",
+          "Manage the vulnerability lifecycle by identifying, prioritizing and coordinating remediation, and validating corrective actions.",
+          "Develop automation scripts for recurring security tasks, detection processes and operational workflows.",
+          "Work with AWS security architecture, secure configurations and cloud-based security monitoring.",
+          "Conduct structured risk analyses to assess technical and business impact and define appropriate measures."
         ],
-        "tag": "DevOps Team"
+        "tag": "Working Student"
+      },
+      {
+        "location": "Berlin, Germany",
+        "role": "IT Security & Administrator",
+        "summary": "Day-to-day IT security and administration across enterprise environments, from endpoints and identity to networks.",
+        "highlights": [
+          "Administered IT security infrastructure including endpoint protection, firewalls, network security devices and monitoring tools.",
+          "Performed system hardening and security baseline management across Windows Server and Linux environments.",
+          "Managed identity and access, including Active Directory, user lifecycle management, RBAC and MFA enforcement.",
+          "Managed network security including firewall administration, network segmentation and VPN configuration.",
+          "Supported security monitoring, incident investigations and technical documentation, coordinating remediation with infrastructure teams."
+        ],
+        "tag": "Working Student"
+      },
+      {
+        "location": "Stuttgart, Germany",
+        "role": "Information Security",
+        "summary": "Supported the implementation of an ISO 27001-compliant ISMS aligned with BSI IT-Grundschutz and GDPR requirements.",
+        "highlights": [
+          "Contributed to internal and external audit preparation and security status reporting.",
+          "Helped create and maintain security policies, procedures and compliance documentation.",
+          "Supported responses to security questionnaires and compliance inquiries."
+        ],
+        "tag": "Internship"
+      },
+      {
+        "location": "Lahore, Pakistan",
+        "role": "Software Engineer",
+        "summary": "Built web applications and backend services with secure development practices and automated security testing.",
+        "highlights": [
+          "Implemented secure coding practices aligned with OWASP guidelines to reduce application vulnerabilities.",
+          "Integrated security controls into CI/CD pipelines to support automated security testing.",
+          "Developed automation scripts and tooling for secure deployment and infrastructure configuration.",
+          "Identified application vulnerabilities and coordinated fixes with development teams.",
+          "Supported API and data security, including authentication controls, input validation and protection of sensitive data."
+        ],
+        "tag": "Full-Time"
       }
     ]
   },
@@ -60,32 +122,32 @@
       {
         "title": "Security Monitoring & Threat Detection",
         "description": "Detecting threats early through monitoring, analysis and detection engineering.",
-        "features": ["Event Analysis", "Alert Triage", "Threat Intelligence", "Detection Rules"]
+        "features": ["SIEM Monitoring", "Alert Analysis", "Threat Intelligence", "Detection Rules"]
       },
       {
         "title": "Incident Response",
         "description": "Managing the full incident lifecycle, from first signal to lasting improvements.",
-        "features": ["Investigation", "Containment", "Remediation", "Post-Incident Reviews"]
+        "features": ["Investigation", "Root Cause Analysis", "Playbooks", "NIS2 Reporting"]
       },
       {
         "title": "Vulnerability Management",
         "description": "Taking vulnerabilities from scanning all the way to validated remediation.",
-        "features": ["Scanning", "Prioritization", "Validated Remediation"]
+        "features": ["Rapid7", "Risk Prioritization", "Remediation Coordination", "Control Validation"]
       },
       {
         "title": "Cloud & Endpoint Security",
         "description": "Protecting cloud workloads and endpoints across the organization.",
-        "features": ["AWS", "Sophos EDR", "Microsoft Defender"]
+        "features": ["AWS", "IAM", "Sophos EDR", "Microsoft Defender", "System Hardening"]
       },
       {
         "title": "DevSecOps & Automation",
         "description": "Building security into development workflows instead of adding it afterwards.",
-        "features": ["CI/CD Security", "Secure Code Reviews", "OWASP", "Python Automation"]
+        "features": ["CI/CD Security", "Secure Coding", "OWASP", "Python Automation"]
       },
       {
         "title": "Governance, Risk & Compliance",
         "description": "Keeping security measurable and audit-ready with clear processes and evidence.",
-        "features": ["ISO 27001", "BSI IT-Grundschutz", "NIS2", "NIST CSF", "Risk Assessments", "Audit Support"]
+        "features": ["ISO 27001", "BSI IT-Grundschutz", "NIS2", "GDPR", "Risk Assessments", "Audit Support"]
       }
     ]
   },
@@ -121,7 +183,7 @@
       },
       {
         "title": "Current Role",
-        "value": "Security Engineer at Bettermile"
+        "value": "Cyber Security Engineer at Bettermile"
       }
     ]
   },
@@ -193,6 +255,18 @@
         ]
       },
       {
+        "id": 4,
+        "title": "NIST Framework Implementation",
+        "description": "Implementation of the NIST security framework using Microsoft tools.",
+        "features": ["NIST Framework", "Microsoft Security Tools"],
+        "developmentDetails": [
+          {
+            "label": "Overview",
+            "text": "Applied the NIST framework in practice, using Microsoft tools to put its security controls in place."
+          }
+        ]
+      },
+      {
         "id": 2,
         "title": "IR Playbook",
         "description": "Incident response playbook template for handling vulnerabilities in dependencies.",
@@ -224,7 +298,7 @@
   },
   "ui": {
     "skip": "Skip to content",
-    "available": "Security Engineer at Bettermile",
+    "available": "Cyber Security Engineer at Bettermile",
     "menu": "Menu",
     "close": "Close",
     "theme": "Toggle theme",
@@ -243,7 +317,7 @@
       "cta_work": "View my work",
       "cta_contact": "Get in touch",
       "stack_label": "Working with",
-      "role_short": "Security Engineer",
+      "role_short": "Cyber Security Engineer",
       "now": "Currently at"
     },
     "about": {

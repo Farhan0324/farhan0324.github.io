@@ -38,6 +38,7 @@ const About = () => {
   const { t, lang } = useTranslation();
   const years = useExperienceYears();
   const time = useClock(TIMEZONE, lang === "de" ? "de-DE" : "en-GB");
+  const education = t("skills.education");
   const current = useMemo(() => (t("workExperience.entries") || [])[0], [t]);
 
   return (
@@ -122,6 +123,34 @@ const About = () => {
               </a>
             </Tile>
           )}
+
+          {/* Education and training */}
+          <Tile className="lg:col-span-6">
+            <div className="grid gap-10 lg:grid-cols-2">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-subtle">{education.heading}</p>
+                <ul className="mt-6 space-y-6">
+                  {education.items.map((item) => (
+                    <li key={item.degree}>
+                      <p className="font-medium">{item.degree}</p>
+                      <p className="mt-1 text-sm text-muted">{item.school}</p>
+                      <p className="mt-1 font-mono text-xs text-subtle">{item.period}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-subtle">{education.training_heading}</p>
+                <ul className="mt-6 space-y-3">
+                  {education.training.map((item) => (
+                    <li key={item} className="text-sm leading-relaxed text-muted">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Tile>
 
           {/* Mission */}
           <Tile delay={60} className="bg-linear-to-br from-accent/10 via-transparent to-accent-2/10 lg:col-span-6">

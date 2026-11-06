@@ -46,7 +46,7 @@ try {
   await check("pre-rendered content works without JavaScript", async () => {
     const page = await openPage({ javaScriptEnabled: false });
     assert.match(await page.locator("h1").innerText(), /security/);
-    assert.equal(await page.locator("#projects article").count(), 3);
+    assert.equal(await page.locator("#projects article").count(), 4);
   });
 
   await check("sections, experience and projects render", async () => {
@@ -54,7 +54,7 @@ try {
     for (const id of ["about", "experience", "expertise", "projects", "contact"]) {
       assert.equal(await page.locator(`#${id}`).count(), 1, id);
     }
-    assert.equal(await page.locator("#experience ol > li").count(), 1);
+    assert.equal(await page.locator("#experience ol > li").count(), 4);
   });
 
   await check("project filters and details work", async () => {
