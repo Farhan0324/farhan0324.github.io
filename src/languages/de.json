@@ -220,12 +220,16 @@
         "name": "Öffentliche Repos"
       },
       {
+        "id": "security",
+        "name": "Sicherheit"
+      },
+      {
         "id": "mobile",
         "name": "Mobil"
       },
       {
-        "id": "other",
-        "name": "Sonstiges"
+        "id": "web",
+        "name": "Web"
       }
     ],
     "card": {
@@ -241,20 +245,45 @@
       "technologies": "Verwendete Technologien",
       "key_features": "Hauptmerkmale",
       "dev_details": "Entwicklungsdetails",
-      "private_repo": "Privates Repository",
+      "private_repo": "Privates Projekt",
       "view_github": "Auf GitHub ansehen",
       "close": "Schließen"
     },
     "items": [
       {
         "id": 4,
-        "title": "Umsetzung des NIST-Frameworks",
-        "description": "Umsetzung des NIST-Sicherheitsframeworks mit Microsoft-Tools.",
-        "features": ["NIST-Framework", "Microsoft-Sicherheitstools"],
+        "title": "Umsetzung von NIST CSF 2.0",
+        "description": "Konzeption und Umsetzung eines Cybersicherheits-Frameworks auf Basis von NIST CSF 2.0 für eine Microsoft-basierte Unternehmensumgebung, mit den Schwerpunkten Security Governance, Risikobewertung, Identitäts- und Zugriffsmanagement, Endpoint-Schutz, Schwachstellenmanagement, Security-Monitoring und Incident Response.",
+        "features": [
+          "Mapping über alle sechs CSF-Funktionen",
+          "Risikoregister & Asset-Inventar",
+          "Ist- und Soll-Profile mit Gap-Analyse",
+          "MFA, Conditional Access & Least Privilege",
+          "Überprüfung privilegierter Zugriffe",
+          "Workflows für Schwachstellen & Behebung",
+          "Security-Monitoring & Incident Response",
+          "Kontrollregister, Roadmap & KPI-Dashboard"
+        ],
         "developmentDetails": [
           {
-            "label": "Überblick",
-            "text": "Praktische Anwendung des NIST-Frameworks, bei der die Sicherheitskontrollen mit Microsoft-Tools umgesetzt wurden."
+            "label": "Framework-Mapping",
+            "text": "Zuordnung der Anforderungen von NIST CSF 2.0 zu den sechs Funktionen: Govern, Identify, Protect, Detect, Respond und Recover."
+          },
+          {
+            "label": "Risiko- & Gap-Analyse",
+            "text": "Entwicklung eines Risikoregisters, eines Asset-Inventars, von Ist- und Soll-Sicherheitsprofilen sowie einer Gap-Analyse, um Sicherheitslücken zu erkennen und die Behebung zu priorisieren."
+          },
+          {
+            "label": "Technische Kontrollen",
+            "text": "Umsetzung von Sicherheitskontrollen mit Microsoft Entra ID, Intune, Defender und Sentinel sowie Konzeption von Identitäts- und Zugriffskontrollen wie MFA, Conditional Access, Least Privilege und Überprüfungen privilegierter Zugriffe."
+          },
+          {
+            "label": "Schwachstellen & Vorfälle",
+            "text": "Entwicklung von Workflows zum Erkennen, Priorisieren, Nachverfolgen und Validieren von Sicherheitsbefunden sowie Aufbau von Security-Monitoring, Incident-Response-Verfahren und Wiederherstellungspraktiken nach NIST CSF."
+          },
+          {
+            "label": "Governance & Reporting",
+            "text": "Erstellung eines Kontrollregisters, einer Umsetzungs-Roadmap, eines Nachweisarchivs und eines KPI-Dashboards zur Überwachung von Sicherheitslage und Wirksamkeit der Kontrollen, ergänzt durch Richtlinien und Verfahren für Zugriffskontrolle, Schwachstellenmanagement, Incident Management, Business Continuity, Risikomanagement, Lieferantensicherheit und Security Awareness."
           }
         ]
       },
@@ -361,7 +390,7 @@
       "eyebrow": "Ausgewählte Arbeiten",
       "details": "Details",
       "source": "Code",
-      "private": "Privates Repository",
+      "private": "Privates Projekt",
       "live": "Live-Seite",
       "count": "{count} Projekte",
       "featured": "Hervorgehoben"

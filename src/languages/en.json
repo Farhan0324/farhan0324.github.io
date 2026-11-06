@@ -220,12 +220,16 @@
         "name": "Public Repos"
       },
       {
+        "id": "security",
+        "name": "Security"
+      },
+      {
         "id": "mobile",
         "name": "Mobile"
       },
       {
-        "id": "other",
-        "name": "Other"
+        "id": "web",
+        "name": "Web"
       }
     ],
     "card": {
@@ -241,20 +245,45 @@
       "technologies": "Technologies Used",
       "key_features": "Key Features",
       "dev_details": "Development Details",
-      "private_repo": "Private Repository",
+      "private_repo": "Private Project",
       "view_github": "View on GitHub",
       "close": "Close"
     },
     "items": [
       {
         "id": 4,
-        "title": "NIST Framework Implementation",
-        "description": "Implementation of the NIST security framework using Microsoft tools.",
-        "features": ["NIST Framework", "Microsoft Security Tools"],
+        "title": "NIST CSF 2.0 Implementation",
+        "description": "Designed and implemented a cybersecurity framework based on NIST CSF 2.0 for a Microsoft-based enterprise environment, covering security governance, risk assessment, identity and access management, endpoint protection, vulnerability management, security monitoring and incident response.",
+        "features": [
+          "Mapping Across All Six CSF Functions",
+          "Risk Register & Asset Inventory",
+          "Current & Target Profiles with Gap Analysis",
+          "MFA, Conditional Access & Least Privilege",
+          "Privileged Access Reviews",
+          "Vulnerability & Remediation Workflows",
+          "Security Monitoring & Incident Response",
+          "Control Register, Roadmap & KPI Dashboard"
+        ],
         "developmentDetails": [
           {
-            "label": "Overview",
-            "text": "Applied the NIST framework in practice, using Microsoft tools to put its security controls in place."
+            "label": "Framework Mapping",
+            "text": "Mapped NIST CSF 2.0 requirements across the six functions: Govern, Identify, Protect, Detect, Respond and Recover."
+          },
+          {
+            "label": "Risk & Gap Analysis",
+            "text": "Developed a cybersecurity risk register, asset inventory, current and target security profiles, and a gap analysis to identify security weaknesses and prioritize remediation."
+          },
+          {
+            "label": "Technical Controls",
+            "text": "Implemented security controls with Microsoft Entra ID, Intune, Defender and Sentinel, and designed identity and access controls including MFA, Conditional Access, least privilege and privileged access reviews."
+          },
+          {
+            "label": "Vulnerability & Incident Handling",
+            "text": "Developed workflows for identifying, prioritizing, tracking and validating security findings, and established security monitoring, incident response procedures and recovery practices aligned with NIST CSF."
+          },
+          {
+            "label": "Governance & Reporting",
+            "text": "Created a security control register, implementation roadmap, evidence repository and KPI dashboard to monitor security posture and control effectiveness, supported by policies and procedures for access control, vulnerability management, incident management, business continuity, risk management, supplier security and security awareness."
           }
         ]
       },
@@ -361,7 +390,7 @@
       "eyebrow": "Selected work",
       "details": "Details",
       "source": "Source",
-      "private": "Private repository",
+      "private": "Private project",
       "live": "Live site",
       "count": "{count} projects",
       "featured": "Featured"

@@ -12,7 +12,7 @@
       "id": 2,
       "image": "/images/projects/ir-playbook.webp",
       "technologies": ["Incident Response", "Dependency Security"],
-      "category": "other",
+      "category": "security",
       "github": "#",
       "demo": "#"
     },
@@ -20,15 +20,25 @@
       "id": 3,
       "image": "/images/projects/portfolio-website.webp",
       "technologies": ["React", "Vite", "Tailwind CSS", "GitHub Actions"],
-      "category": "other",
+      "category": "web",
       "github": "https://github.com/Farhan0324/farhan0324.github.io",
       "demo": "https://farhan0324.github.io/"
     },
     {
       "id": 4,
       "image": "/images/projects/nist-framework.webp",
-      "technologies": ["NIST", "Microsoft Tools"],
-      "category": "other",
+      "technologies": [
+        "NIST CSF 2.0",
+        "Microsoft Entra ID",
+        "Microsoft Intune",
+        "Microsoft Defender",
+        "Microsoft Sentinel",
+        "Microsoft Purview",
+        "Azure",
+        "SharePoint",
+        "Power BI"
+      ],
+      "category": "security",
       "github": "#",
       "demo": "#"
     }
