@@ -45,8 +45,8 @@ const check = async (name, run) => {
 try {
   await check("pre-rendered content works without JavaScript", async () => {
     const page = await openPage({ javaScriptEnabled: false });
-    assert.match(await page.locator("h1").innerText(), /apps/);
-    assert.equal(await page.locator("#projects article").count(), 4);
+    assert.match(await page.locator("h1").innerText(), /security/);
+    assert.equal(await page.locator("#projects article").count(), 3);
   });
 
   await check("sections, experience and projects render", async () => {
@@ -54,7 +54,7 @@ try {
     for (const id of ["about", "experience", "expertise", "projects", "contact"]) {
       assert.equal(await page.locator(`#${id}`).count(), 1, id);
     }
-    assert.equal(await page.locator("#experience ol > li").count(), 2);
+    assert.equal(await page.locator("#experience ol > li").count(), 1);
   });
 
   await check("project filters and details work", async () => {
@@ -86,7 +86,7 @@ try {
   await check("German language and title load", async () => {
     const page = await openPage({ locale: "de-DE" });
     await page.waitForTimeout(500);
-    assert.match(await page.locator("h1").innerText(), /entwickle/);
+    assert.match(await page.locator("h1").innerText(), /Sicherheit/);
     assert.equal(await page.evaluate(() => document.documentElement.lang), "de");
   });
 

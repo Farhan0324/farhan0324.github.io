@@ -1,7 +1,7 @@
 {
   "hero": {
-    "role": "[Your job title]",
-    "summary": "I design and build apps, most recently Deutsch Spark, a Flutter app for learning German from A1 to C2. [Add one or two sentences about your background.]",
+    "role": "Cyber Security Engineer",
+    "summary": "I'm a Security Engineer with over two years of experience in IT security engineering, security operations and GRC across cloud and enterprise environments, backed by a software engineering background in secure development.",
     "buttons": {
       "projects": "Projects",
       "experience": "Experience",
@@ -23,15 +23,15 @@
       "experience_snapshot": "Snapshot"
     },
     "intro": {
-      "paragraph1": "[Your short introduction: who you are, what you do and what you work with.]",
-      "paragraph2": "My latest project is Deutsch Spark, an app that takes learners from A1 to C2 with lessons, flashcards, quizzes and spaced-repetition review. [Add what you are working on now and what you care about.]"
+      "paragraph1": "I'm a Security Engineer with over two years of experience in IT security engineering, security operations, and governance, risk and compliance (GRC) across cloud and enterprise environments.",
+      "paragraph2": "Currently I work as a Security Engineer within the DevOps team at Bettermile, where I focus on detecting threats early, managing vulnerabilities end to end, and building security into development workflows rather than adding it afterwards. Before moving into security, I worked as a Software Engineer, which helps me speak the same language as development teams and turn security requirements into practical solutions."
     },
-    "mission": "[One sentence about what you want your work to do.]"
+    "mission": "I want to detect threats earlier and build security in from the start, and I'm especially interested in how AI-driven technologies can strengthen cybersecurity."
   },
   "workExperience": {
     "badge": "Career Timeline",
     "heading": "Work Experience",
-    "description": "[One sentence about your career so far.]",
+    "description": "From software engineering to security engineering, with a focus on practical solutions for development teams.",
     "duration_label": "Duration",
     "key_impact": "Key Impact",
     "present": "Present",
@@ -42,43 +42,56 @@
     "months": "months",
     "entries": [
       {
-        "location": "[City, Country]",
-        "role": "[Your job title]",
-        "summary": "[One sentence about what you do here.]",
-        "highlights": ["[Something you achieved here.]", "[Another achievement.]"],
-        "tag": "[Full-Time]"
-      },
-      {
-        "location": "[City, Country]",
-        "role": "[Your previous job title]",
-        "summary": "[One sentence about what you did here.]",
-        "highlights": ["[Something you achieved here.]"],
-        "tag": "[Full-Time]"
+        "location": "Berlin, Germany",
+        "role": "Security Engineer",
+        "summary": "Security engineering within the DevOps team, focused on detecting threats early, managing vulnerabilities end to end, and building security into development workflows.",
+        "highlights": [
+          "Security monitoring, event analysis and alert triage.",
+          "Incident response across the full lifecycle, from detection and investigation to containment, remediation and post-incident improvements.",
+          "Vulnerability lifecycle management, from scanning to validated remediation.",
+          "ISMS development and maintenance aligned with ISO 27001, BSI IT-Grundschutz, NIS2 and NIST CSF."
+        ],
+        "tag": "DevOps Team"
       }
     ]
   },
   "expertise": {
     "items": [
       {
-        "title": "Mobile App Development",
-        "description": "Android apps built with Flutter, from the first idea to a signed release.",
-        "features": ["Flutter & Dart", "Android", "Offline Storage", "Text-to-Speech"]
+        "title": "Security Monitoring & Threat Detection",
+        "description": "Detecting threats early through monitoring, analysis and detection engineering.",
+        "features": ["Event Analysis", "Alert Triage", "Threat Intelligence", "Detection Rules"]
       },
       {
-        "title": "Language Learning Products",
-        "description": "Learning features that help people keep practising.",
-        "features": ["Spaced Repetition", "Flashcards & Quizzes", "Streaks & Reminders", "Multi-language Content"]
+        "title": "Incident Response",
+        "description": "Managing the full incident lifecycle, from first signal to lasting improvements.",
+        "features": ["Investigation", "Containment", "Remediation", "Post-Incident Reviews"]
       },
       {
-        "title": "[Your focus area]",
-        "description": "[One sentence about this area.]",
-        "features": ["[Skill]", "[Skill]"]
+        "title": "Vulnerability Management",
+        "description": "Taking vulnerabilities from scanning all the way to validated remediation.",
+        "features": ["Scanning", "Prioritization", "Validated Remediation"]
+      },
+      {
+        "title": "Cloud & Endpoint Security",
+        "description": "Protecting cloud workloads and endpoints across the organization.",
+        "features": ["AWS", "Sophos EDR", "Microsoft Defender"]
+      },
+      {
+        "title": "DevSecOps & Automation",
+        "description": "Building security into development workflows instead of adding it afterwards.",
+        "features": ["CI/CD Security", "Secure Code Reviews", "OWASP", "Python Automation"]
+      },
+      {
+        "title": "Governance, Risk & Compliance",
+        "description": "Keeping security measurable and audit-ready with clear processes and evidence.",
+        "features": ["ISO 27001", "BSI IT-Grundschutz", "NIS2", "NIST CSF", "Risk Assessments", "Audit Support"]
       }
     ]
   },
   "contact": {
     "heading": "Get In Touch",
-    "subheading": "Questions, ideas or a project in mind? I'm happy to hear from you.",
+    "subheading": "Questions, ideas or a security topic you'd like to talk about? I'm happy to hear from you.",
     "form_heading": "Send Message",
     "recaptcha_unavailable": "reCAPTCHA is unavailable in this environment.",
     "alert_recaptcha": "Please complete the reCAPTCHA before submitting.",
@@ -108,17 +121,13 @@
       },
       {
         "title": "Current Role",
-        "value": "[Your job title] at [Company name]"
-      },
-      {
-        "title": "Availability",
-        "value": "[Your availability]"
+        "value": "Security Engineer at Bettermile"
       }
     ]
   },
   "projects": {
     "heading": "Featured Projects",
-    "subheading": "Selected work, from mobile apps to security documentation.",
+    "subheading": "Selected work, from security documentation to mobile apps.",
     "filters": [
       {
         "id": "all",
@@ -191,7 +200,7 @@
         "developmentDetails": [
           {
             "label": "Overview",
-            "text": "[Add what the playbook covers and how you used it.]"
+            "text": "A reusable template for responding to vulnerabilities found in project dependencies."
           }
         ]
       },
@@ -210,24 +219,12 @@
             "text": "GitHub Actions builds the site and publishes it to GitHub Pages."
           }
         ]
-      },
-      {
-        "id": 4,
-        "title": "[Project name]",
-        "description": "[One or two sentences about this project.]",
-        "features": ["[Feature]", "[Feature]"],
-        "developmentDetails": [
-          {
-            "label": "Overview",
-            "text": "[What you built and why.]"
-          }
-        ]
       }
     ]
   },
   "ui": {
     "skip": "Skip to content",
-    "available": "[Your job title] at [Company name]",
+    "available": "Security Engineer at Bettermile",
     "menu": "Menu",
     "close": "Close",
     "theme": "Toggle theme",
@@ -241,18 +238,18 @@
     "hero": {
       "greeting": "Hi, I'm Farhan Amjad",
       "headline_a": "I build",
-      "headline_em": "simple",
-      "headline_b": "apps that solve real problems.",
+      "headline_em": "security",
+      "headline_b": "into how teams ship software.",
       "cta_work": "View my work",
       "cta_contact": "Get in touch",
       "stack_label": "Working with",
-      "role_short": "Developer",
+      "role_short": "Security Engineer",
       "now": "Currently at"
     },
     "about": {
       "eyebrow": "About",
-      "heading_a": "Building apps",
-      "heading_em": "people can use",
+      "heading_a": "Security that works",
+      "heading_em": "with development teams",
       "location": "Based in",
       "local_time": "Local time",
       "skills": "Technical skills",
@@ -277,8 +274,8 @@
     },
     "contact": {
       "eyebrow": "Contact",
-      "heading_a": "Let's build",
-      "heading_em": "something",
+      "heading_a": "Let's talk",
+      "heading_em": "security",
       "heading_b": "together.",
       "copy": "Copy email",
       "copied": "Copied to clipboard",
@@ -315,8 +312,8 @@
       "portrait": "Portrait of Farhan Amjad"
     },
     "meta": {
-      "title": "Farhan Amjad — [Your job title]",
-      "description": "Farhan Amjad, developer of Deutsch Spark, a Flutter app for learning German. See my projects, experience and how to get in touch."
+      "title": "Farhan Amjad — Cyber Security Engineer",
+      "description": "Farhan Amjad, Cyber Security Engineer in Berlin, working across security operations, incident response, vulnerability management, cloud security, DevSecOps and GRC."
     },
     "consent": {
       "title": "Cookies and your privacy",

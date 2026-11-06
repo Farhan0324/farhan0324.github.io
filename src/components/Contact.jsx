@@ -72,7 +72,7 @@ const buildEmailStrings = (isDE, name, role) => ({
   email_label_spec: isDE ? "Spezialisierung" : "Specialization",
   email_social_title: isDE ? "Verbinden Sie sich mit mir in sozialen Netzwerken:" : "Connect with me on social media:",
   email_signoff: isDE ? "Mit freundlichen Grüßen," : "Best regards,",
-  email_tagline: isDE ? "Einfache Apps für echte Probleme" : "Simple apps for real problems",
+  email_tagline: isDE ? "Sicherheit von Anfang an" : "Building security in from the start",
 });
 
 const EMPTY_FORM = { name: "", email: "", subject: "", message: "" };

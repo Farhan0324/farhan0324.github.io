@@ -30,9 +30,11 @@ const formatDuration = (startDate, endDate, now, labels) => {
 const Role = ({ experience, index, now, formatter, labels, present, impactLabel }) => {
   const reveal = useReveal();
   const isCurrent = !experience.endDate;
-  const period = `${formatter.format(new Date(experience.startDate))} — ${
-    experience.endDate ? formatter.format(new Date(experience.endDate)) : present
-  }`;
+  const period =
+    experience.startDate &&
+    `${formatter.format(new Date(experience.startDate))} — ${
+      experience.endDate ? formatter.format(new Date(experience.endDate)) : present
+    }`;
 
   return (
     <li
@@ -49,10 +51,16 @@ const Role = ({ experience, index, now, formatter, labels, present, impactLabel 
       />
 
       <div className="md:pl-8">
-        <p className="font-mono text-xs tabular-nums text-muted">{period}</p>
-        <p className="mt-1 font-mono text-xs text-subtle">
-          {formatDuration(experience.startDate, experience.endDate, now, labels)}
-        </p>
+        {period ? (
+          <>
+            <p className="font-mono text-xs tabular-nums text-muted">{period}</p>
+            <p className="mt-1 font-mono text-xs text-subtle">
+              {formatDuration(experience.startDate, experience.endDate, now, labels)}
+            </p>
+          </>
+        ) : (
+          <p className="font-mono text-xs tabular-nums text-muted">{present}</p>
+        )}
         <span className="chip mt-3">{experience.tag}</span>
       </div>
 
@@ -152,7 +160,7 @@ const WorkExperience = () => {
           <ol className="relative divide-y divide-line border-y border-line md:border-l md:border-y-0 md:divide-y-0">
             {experiences.map((experience, index) => (
               <Role
-                key={experience.startDate}
+                key={`${experience.company}-${experience.role}`}
                 experience={experience}
                 index={index}
                 now={now}

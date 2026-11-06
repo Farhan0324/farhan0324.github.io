@@ -2,38 +2,68 @@
   "name": "Farhan Amjad",
   "firstName": "Farhan",
   "initials": "FA",
-  "email": "your.email@example.com",
+  "email": "farhanamjad0324@gmail.com",
   "siteUrl": "https://farhan0324.github.io",
   "location": {
-    "city": "[Your city]",
-    "region": "[Your country]",
-    "timezone": "UTC",
-    "timezoneLabel": "UTC"
+    "city": "Berlin",
+    "region": "Germany",
+    "timezone": "Europe/Berlin",
+    "timezoneLabel": "CET / CEST"
   },
   "careerStart": "2024-01-01",
   "socials": [
-    { "id": "github", "name": "GitHub", "url": "https://github.com/Farhan0324", "handle": "@Farhan0324" },
-    { "id": "linkedin", "name": "LinkedIn", "url": "", "handle": "" }
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com/Farhan0324",
+      "handle": "@Farhan0324"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/farhan-amjad-334450143",
+      "handle": "in/farhan-amjad-334450143"
+    }
   ],
   "stack": [
-    "Flutter",
-    "Dart",
-    "Android",
-    "React",
-    "Vite",
-    "Tailwind CSS",
-    "Git",
-    "GitHub Actions",
-    "Incident Response"
+    "Python",
+    "AWS",
+    "Sophos EDR",
+    "Microsoft Defender",
+    "ISO 27001",
+    "BSI IT-Grundschutz",
+    "NIS2",
+    "NIST CSF",
+    "OWASP",
+    "CI/CD Security",
+    "Threat Modeling",
+    "Detection Rules"
   ],
   "skills": [
-    "Flutter & Dart",
-    "Android apps",
-    "Git & GitHub",
-    "GitHub Actions",
-    "Incident response",
-    "[Add your skills]"
+    "Security Monitoring",
+    "Alert Triage",
+    "Incident Response",
+    "Threat Intelligence",
+    "Detection Rule Development",
+    "Vulnerability Management",
+    "AWS Security",
+    "Sophos EDR",
+    "Microsoft Defender",
+    "DevSecOps",
+    "Secure Code Reviews",
+    "OWASP",
+    "Python Automation",
+    "ISO 27001",
+    "BSI IT-Grundschutz",
+    "NIS2",
+    "NIST CSF",
+    "Risk Assessments",
+    "Threat Modeling",
+    "Audit Support"
   ],
   "stats": [],
-  "resume": { "en": null, "de": null }
+  "resume": {
+    "en": null,
+    "de": null
+  }
 }
