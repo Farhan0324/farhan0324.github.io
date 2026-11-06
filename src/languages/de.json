@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "role": "[Your job title]",
+    "summary": "Ich entwerfe und entwickle Apps, zuletzt Deutsch Spark, eine Flutter-App zum Deutschlernen von A1 bis C2. [Add one or two sentences about your background.]",
+    "buttons": {
+      "projects": "Projekte",
+      "experience": "Erfahrung",
+      "resume": "Lebenslauf",
+      "view_resume": "Lebenslauf ansehen",
+      "download_resume": "Lebenslauf herunterladen"
+    },
+    "modal": {
+      "profiles": {
+        "email": {
+          "name": "E-Mail",
+          "description": "Direkter beruflicher Kontakt"
+        }
+      }
+    }
+  },
+  "skills": {
+    "headings": {
+      "experience_snapshot": "Überblick"
+    },
+    "intro": {
+      "paragraph1": "[Your short introduction: who you are, what you do and what you work with.]",
+      "paragraph2": "Mein aktuelles Projekt ist Deutsch Spark, eine App, die Lernende mit Lektionen, Karteikarten, Quizzen und Wiederholung in Intervallen von A1 bis C2 begleitet. [Add what you are working on now and what you care about.]"
+    },
+    "mission": "[One sentence about what you want your work to do.]"
+  },
+  "workExperience": {
+    "badge": "Karriere-Zeitachse",
+    "heading": "Berufserfahrung",
+    "description": "[One sentence about your career so far.]",
+    "duration_label": "Dauer",
+    "key_impact": "Wichtigste Erfolge",
+    "present": "Heute",
+    "less_than_month": "Weniger als 1 Monat",
+    "year": "Jahr",
+    "years": "Jahre",
+    "month": "Monat",
+    "months": "Monate",
+    "entries": [
+      {
+        "location": "[City, Country]",
+        "role": "[Your job title]",
+        "summary": "[One sentence about what you do here.]",
+        "highlights": ["[Something you achieved here.]", "[Another achievement.]"],
+        "tag": "[Full-Time]"
+      },
+      {
+        "location": "[City, Country]",
+        "role": "[Your previous job title]",
+        "summary": "[One sentence about what you did here.]",
+        "highlights": ["[Something you achieved here.]"],
+        "tag": "[Full-Time]"
+      }
+    ]
+  },
+  "expertise": {
+    "items": [
+      {
+        "title": "Mobile App-Entwicklung",
+        "description": "Android-Apps mit Flutter, von der ersten Idee bis zum signierten Release.",
+        "features": ["Flutter & Dart", "Android", "Offline-Speicherung", "Sprachausgabe"]
+      },
+      {
+        "title": "Sprachlern-Produkte",
+        "description": "Lernfunktionen, die Menschen beim Dranbleiben helfen.",
+        "features": [
+          "Wiederholung in Intervallen",
+          "Karteikarten & Quizze",
+          "Serien & Erinnerungen",
+          "Mehrsprachige Inhalte"
+        ]
+      },
+      {
+        "title": "[Your focus area]",
+        "description": "[One sentence about this area.]",
+        "features": ["[Skill]", "[Skill]"]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Kontakt aufnehmen",
+    "subheading": "Fragen, Ideen oder ein Projekt im Kopf? Ich freue mich auf Ihre Nachricht.",
+    "form_heading": "Nachricht senden",
+    "recaptcha_unavailable": "reCAPTCHA ist in dieser Umgebung nicht verfügbar.",
+    "alert_recaptcha": "Bitte füllen Sie das reCAPTCHA vor dem Absenden aus.",
+    "status": {
+      "success_title": "Erfolg!",
+      "success_body": "Nachricht erfolgreich gesendet! Ich melde mich bald bei Ihnen.",
+      "error": "❌ Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt.",
+      "config_missing": "Das Kontaktformular ist in dieser Umgebung nicht konfiguriert. Bitte verwenden Sie stattdessen den E-Mail-Link.",
+      "not_configured": "Das Kontaktformular ist hier nicht konfiguriert. Bitte verwenden Sie den E-Mail-Link, um Kontakt aufzunehmen."
+    },
+    "form": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet..."
+    },
+    "contact_info": [
+      {
+        "title": "E-Mail",
+        "value": "{email}"
+      },
+      {
+        "title": "Standort",
+        "value": "{city}, {region}"
+      },
+      {
+        "title": "Aktuelle Rolle",
+        "value": "[Your job title] bei [Company name]"
+      },
+      {
+        "title": "Verfügbarkeit",
+        "value": "[Your availability]"
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Ausgewählte Projekte",
+    "subheading": "Ausgewählte Arbeiten, von mobilen Apps bis zu Sicherheitsdokumentation.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "Alle Projekte"
+      },
+      {
+        "id": "public",
+        "name": "Öffentliche Repos"
+      },
+      {
+        "id": "mobile",
+        "name": "Mobil"
+      },
+      {
+        "id": "other",
+        "name": "Sonstiges"
+      }
+    ],
+    "card": {
+      "github_title": "Auf GitHub ansehen"
+    },
+    "toggle": {
+      "show_less": "Weniger anzeigen",
+      "view_all": "Alle Projekte ansehen",
+      "showing": "Zeige {visible} von {total}"
+    },
+    "modal": {
+      "overview": "Projektübersicht",
+      "technologies": "Verwendete Technologien",
+      "key_features": "Hauptmerkmale",
+      "dev_details": "Entwicklungsdetails",
+      "private_repo": "Privates Repository",
+      "view_github": "Auf GitHub ansehen",
+      "close": "Schließen"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Deutsch Spark",
+        "description": "Flutter-App zum Deutschlernen von A1 bis C2 mit 1.245 Wörtern und Sätzen, 50 Grammatiklektionen, Karteikarten, Quizzen, Einstufungstests und Wiederholung in Intervallen.",
+        "features": [
+          "1.245 Wörter & Sätze",
+          "50 Grammatiklektionen",
+          "Karteikarten & Quizze",
+          "Einstufungstests",
+          "Wiederholung in Intervallen",
+          "Sprachausgabe",
+          "Serien & tägliche Erinnerungen"
+        ],
+        "developmentDetails": [
+          {
+            "label": "Lerninhalte",
+            "text": "Deckt alle Stufen von A1 bis C2 ab und verbindet Wortschatz, Grammatiklektionen, Einstufungstests und Wiederholung in einer App."
+          },
+          {
+            "label": "Sprachen",
+            "text": "Urdu und Englisch sind integriert, 28 weitere Sprachen sind online verfügbar."
+          },
+          {
+            "label": "Datenschutz",
+            "text": "Kein Konto und keine Werbung. Der Fortschritt bleibt offline verfügbar und lässt sich sichern."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "IR Playbook",
+        "description": "Vorlage für ein Incident-Response-Playbook zum Umgang mit Schwachstellen in Abhängigkeiten.",
+        "features": ["Reaktionsvorlage", "Schwachstellen in Abhängigkeiten"],
+        "developmentDetails": [
+          {
+            "label": "Überblick",
+            "text": "[Add what the playbook covers and how you used it.]"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Portfolio-Website",
+        "description": "Diese Website: ein schnelles persönliches Portfolio mit React, Vite und Tailwind CSS, mit Inhalten auf Englisch und Deutsch.",
+        "features": ["Vorgerendertes HTML", "Befehlsmenü", "Inhalte auf Englisch & Deutsch", "Helles & dunkles Design"],
+        "developmentDetails": [
+          {
+            "label": "Architektur",
+            "text": "Eine React- und Vite-Seite, die beim Build zu statischem HTML vorgerendert wird, sodass Inhalte vor dem JavaScript erscheinen."
+          },
+          {
+            "label": "Bereitstellung",
+            "text": "GitHub Actions baut die Website und veröffentlicht sie auf GitHub Pages."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "[Project name]",
+        "description": "[One or two sentences about this project.]",
+        "features": ["[Feature]", "[Feature]"],
+        "developmentDetails": [
+          {
+            "label": "Überblick",
+            "text": "[What you built and why.]"
+          }
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "skip": "Zum Inhalt springen",
+    "available": "[Your job title] bei [Company name]",
+    "menu": "Menü",
+    "close": "Schließen",
+    "theme": "Design umschalten",
+    "nav": {
+      "about": "Über mich",
+      "experience": "Erfahrung",
+      "expertise": "Fokus",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "greeting": "Hallo, ich bin Farhan Amjad",
+      "headline_a": "Ich entwickle",
+      "headline_em": "einfache",
+      "headline_b": "Apps, die echte Probleme lösen.",
+      "cta_work": "Projekte ansehen",
+      "cta_contact": "Kontakt aufnehmen",
+      "stack_label": "Ich arbeite mit",
+      "role_short": "Entwickler",
+      "now": "Aktuell bei"
+    },
+    "about": {
+      "eyebrow": "Über mich",
+      "heading_a": "Ich entwickle Apps,",
+      "heading_em": "die Menschen nutzen können",
+      "location": "Standort",
+      "local_time": "Ortszeit",
+      "skills": "Technische Fähigkeiten",
+      "mission": "Mission"
+    },
+    "experience": {
+      "eyebrow": "Erfahrung"
+    },
+    "expertise": {
+      "eyebrow": "Fokus",
+      "heading_a": "Woran ich",
+      "heading_em": "arbeite"
+    },
+    "projects": {
+      "eyebrow": "Ausgewählte Arbeiten",
+      "details": "Details",
+      "source": "Code",
+      "private": "Privates Repository",
+      "live": "Live-Seite",
+      "count": "{count} Projekte",
+      "featured": "Hervorgehoben"
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "heading_a": "Lassen Sie uns",
+      "heading_em": "gemeinsam",
+      "heading_b": "etwas bauen.",
+      "copy": "E-Mail kopieren",
+      "copied": "In die Zwischenablage kopiert",
+      "or": "oder senden Sie eine Nachricht",
+      "response": "Ich antworte in der Regel innerhalb von 24 Stunden.",
+      "recaptcha_hint": "Die Verifizierung wird geladen, sobald Sie mit der Eingabe beginnen.",
+      "incomplete": "Bitte geben Sie Ihren Namen, den Betreff und Ihre Nachricht ein."
+    },
+    "footer": {
+      "rights": "Alle Rechte vorbehalten.",
+      "top": "Nach oben",
+      "built": "Entwickelt mit React, Vite und Tailwind CSS."
+    },
+    "cmd": {
+      "open": "Befehlsmenü öffnen",
+      "placeholder": "Befehl eingeben oder suchen…",
+      "empty": "Keine Ergebnisse.",
+      "nav": "Navigation",
+      "actions": "Aktionen",
+      "links": "Links",
+      "theme": "Helles / dunkles Design umschalten",
+      "lang": "Switch to English",
+      "resume": "Lebenslauf herunterladen",
+      "view_resume": "Lebenslauf ansehen",
+      "copy": "E-Mail-Adresse kopieren",
+      "hint_select": "auswählen",
+      "hint_nav": "navigieren",
+      "hint_close": "schließen"
+    },
+    "a11y": {
+      "nav": "Hauptnavigation",
+      "language": "Sprache",
+      "filter": "Projekte filtern",
+      "portrait": "Porträt von Farhan Amjad"
+    },
+    "meta": {
+      "title": "Farhan Amjad — [Your job title]",
+      "description": "Farhan Amjad, Entwickler von Deutsch Spark, einer Flutter-App zum Deutschlernen. Hier finden Sie meine Projekte, meine Erfahrung und meinen Kontakt."
+    },
+    "consent": {
+      "title": "Cookies und Datenschutz",
+      "text": "Ich möchte Cookies von Google Analytics nutzen, um zu sehen, welche Bereiche dieser Website verwendet werden und woher Besucher ungefähr kommen. Google kann diese Daten in den USA verarbeiten. Ohne Ihre Zustimmung wird nichts gesetzt, und Sie können Ihre Auswahl jederzeit unter Cookie-Einstellungen ändern.",
+      "accept": "Akzeptieren",
+      "decline": "Ablehnen",
+      "privacy": "Datenschutzerklärung",
+      "settings": "Cookie-Einstellungen"
+    }
+  }
+}

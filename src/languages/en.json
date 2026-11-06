@@ -1,0 +1,330 @@
+{
+  "hero": {
+    "role": "[Your job title]",
+    "summary": "I design and build apps, most recently Deutsch Spark, a Flutter app for learning German from A1 to C2. [Add one or two sentences about your background.]",
+    "buttons": {
+      "projects": "Projects",
+      "experience": "Experience",
+      "resume": "Resume",
+      "view_resume": "View Resume",
+      "download_resume": "Download Resume"
+    },
+    "modal": {
+      "profiles": {
+        "email": {
+          "name": "Email",
+          "description": "Direct professional contact"
+        }
+      }
+    }
+  },
+  "skills": {
+    "headings": {
+      "experience_snapshot": "Snapshot"
+    },
+    "intro": {
+      "paragraph1": "[Your short introduction: who you are, what you do and what you work with.]",
+      "paragraph2": "My latest project is Deutsch Spark, an app that takes learners from A1 to C2 with lessons, flashcards, quizzes and spaced-repetition review. [Add what you are working on now and what you care about.]"
+    },
+    "mission": "[One sentence about what you want your work to do.]"
+  },
+  "workExperience": {
+    "badge": "Career Timeline",
+    "heading": "Work Experience",
+    "description": "[One sentence about your career so far.]",
+    "duration_label": "Duration",
+    "key_impact": "Key Impact",
+    "present": "Present",
+    "less_than_month": "Less than 1 month",
+    "year": "year",
+    "years": "years",
+    "month": "month",
+    "months": "months",
+    "entries": [
+      {
+        "location": "[City, Country]",
+        "role": "[Your job title]",
+        "summary": "[One sentence about what you do here.]",
+        "highlights": ["[Something you achieved here.]", "[Another achievement.]"],
+        "tag": "[Full-Time]"
+      },
+      {
+        "location": "[City, Country]",
+        "role": "[Your previous job title]",
+        "summary": "[One sentence about what you did here.]",
+        "highlights": ["[Something you achieved here.]"],
+        "tag": "[Full-Time]"
+      }
+    ]
+  },
+  "expertise": {
+    "items": [
+      {
+        "title": "Mobile App Development",
+        "description": "Android apps built with Flutter, from the first idea to a signed release.",
+        "features": ["Flutter & Dart", "Android", "Offline Storage", "Text-to-Speech"]
+      },
+      {
+        "title": "Language Learning Products",
+        "description": "Learning features that help people keep practising.",
+        "features": ["Spaced Repetition", "Flashcards & Quizzes", "Streaks & Reminders", "Multi-language Content"]
+      },
+      {
+        "title": "[Your focus area]",
+        "description": "[One sentence about this area.]",
+        "features": ["[Skill]", "[Skill]"]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "subheading": "Questions, ideas or a project in mind? I'm happy to hear from you.",
+    "form_heading": "Send Message",
+    "recaptcha_unavailable": "reCAPTCHA is unavailable in this environment.",
+    "alert_recaptcha": "Please complete the reCAPTCHA before submitting.",
+    "status": {
+      "success_title": "Success!",
+      "success_body": "Message sent successfully! I'll get back to you soon.",
+      "error": "❌ Error sending message. Please try again or contact me directly.",
+      "config_missing": "Contact form is not configured in this environment. Please use the email link instead.",
+      "not_configured": "Contact form is not configured here. Please use the email link to get in touch."
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "contact_info": [
+      {
+        "title": "Email",
+        "value": "{email}"
+      },
+      {
+        "title": "Location",
+        "value": "{city}, {region}"
+      },
+      {
+        "title": "Current Role",
+        "value": "[Your job title] at [Company name]"
+      },
+      {
+        "title": "Availability",
+        "value": "[Your availability]"
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Featured Projects",
+    "subheading": "Selected work, from mobile apps to security documentation.",
+    "filters": [
+      {
+        "id": "all",
+        "name": "All Projects"
+      },
+      {
+        "id": "public",
+        "name": "Public Repos"
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile"
+      },
+      {
+        "id": "other",
+        "name": "Other"
+      }
+    ],
+    "card": {
+      "github_title": "View on GitHub"
+    },
+    "toggle": {
+      "show_less": "Show Less",
+      "view_all": "View All Projects",
+      "showing": "Showing {visible} of {total}"
+    },
+    "modal": {
+      "overview": "Project Overview",
+      "technologies": "Technologies Used",
+      "key_features": "Key Features",
+      "dev_details": "Development Details",
+      "private_repo": "Private Repository",
+      "view_github": "View on GitHub",
+      "close": "Close"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Deutsch Spark",
+        "description": "Flutter app for learning German from A1 to C2, with 1,245 words and sentences, 50 grammar lessons, flashcards, quizzes, level tests and spaced-repetition review.",
+        "features": [
+          "1,245 Words & Sentences",
+          "50 Grammar Lessons",
+          "Flashcards & Quizzes",
+          "Level Tests",
+          "Spaced-Repetition Review",
+          "Text-to-Speech",
+          "Streaks & Daily Reminders"
+        ],
+        "developmentDetails": [
+          {
+            "label": "Learning Content",
+            "text": "Covers every level from A1 to C2, combining vocabulary, grammar lessons, level tests and review in one app."
+          },
+          {
+            "label": "Languages",
+            "text": "Urdu and English are built in, and 28 more languages are available online."
+          },
+          {
+            "label": "Privacy",
+            "text": "No account and no ads. Progress stays available offline and can be backed up."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "IR Playbook",
+        "description": "Incident response playbook template for handling vulnerabilities in dependencies.",
+        "features": ["Response Template", "Dependency Vulnerabilities"],
+        "developmentDetails": [
+          {
+            "label": "Overview",
+            "text": "[Add what the playbook covers and how you used it.]"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Portfolio Website",
+        "description": "This site: a fast personal portfolio built with React, Vite and Tailwind CSS, with English and German content.",
+        "features": ["Pre-rendered HTML", "Command Menu", "English & German Content", "Light & Dark Themes"],
+        "developmentDetails": [
+          {
+            "label": "Architecture",
+            "text": "A React and Vite page pre-rendered to static HTML at build time, so content appears before JavaScript loads."
+          },
+          {
+            "label": "Deployment",
+            "text": "GitHub Actions builds the site and publishes it to GitHub Pages."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "[Project name]",
+        "description": "[One or two sentences about this project.]",
+        "features": ["[Feature]", "[Feature]"],
+        "developmentDetails": [
+          {
+            "label": "Overview",
+            "text": "[What you built and why.]"
+          }
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "available": "[Your job title] at [Company name]",
+    "menu": "Menu",
+    "close": "Close",
+    "theme": "Toggle theme",
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "expertise": "Focus",
+      "projects": "Work",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hi, I'm Farhan Amjad",
+      "headline_a": "I build",
+      "headline_em": "simple",
+      "headline_b": "apps that solve real problems.",
+      "cta_work": "View my work",
+      "cta_contact": "Get in touch",
+      "stack_label": "Working with",
+      "role_short": "Developer",
+      "now": "Currently at"
+    },
+    "about": {
+      "eyebrow": "About",
+      "heading_a": "Building apps",
+      "heading_em": "people can use",
+      "location": "Based in",
+      "local_time": "Local time",
+      "skills": "Technical skills",
+      "mission": "Mission"
+    },
+    "experience": {
+      "eyebrow": "Experience"
+    },
+    "expertise": {
+      "eyebrow": "Focus",
+      "heading_a": "What I",
+      "heading_em": "work on"
+    },
+    "projects": {
+      "eyebrow": "Selected work",
+      "details": "Details",
+      "source": "Source",
+      "private": "Private repository",
+      "live": "Live site",
+      "count": "{count} projects",
+      "featured": "Featured"
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "heading_a": "Let's build",
+      "heading_em": "something",
+      "heading_b": "together.",
+      "copy": "Copy email",
+      "copied": "Copied to clipboard",
+      "or": "or send a message",
+      "response": "I usually reply within 24 hours.",
+      "recaptcha_hint": "Verification loads when you start typing.",
+      "incomplete": "Please fill in your name, subject and message."
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "top": "Back to top",
+      "built": "Built with React, Vite and Tailwind CSS."
+    },
+    "cmd": {
+      "open": "Open command menu",
+      "placeholder": "Type a command or search…",
+      "empty": "No results found.",
+      "nav": "Navigate",
+      "actions": "Actions",
+      "links": "Links",
+      "theme": "Toggle light / dark theme",
+      "lang": "Auf Deutsch wechseln",
+      "resume": "Download resume",
+      "view_resume": "View resume",
+      "copy": "Copy email address",
+      "hint_select": "select",
+      "hint_nav": "navigate",
+      "hint_close": "close"
+    },
+    "a11y": {
+      "nav": "Primary",
+      "language": "Language",
+      "filter": "Filter projects",
+      "portrait": "Portrait of Farhan Amjad"
+    },
+    "meta": {
+      "title": "Farhan Amjad — [Your job title]",
+      "description": "Farhan Amjad, developer of Deutsch Spark, a Flutter app for learning German. See my projects, experience and how to get in touch."
+    },
+    "consent": {
+      "title": "Cookies and your privacy",
+      "text": "I'd like to use Google Analytics cookies to see which parts of this site are used and roughly where visitors come from. Google may process this data in the US. Nothing is set unless you accept, and you can change your choice anytime under Cookie settings.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "privacy": "Privacy Policy",
+      "settings": "Cookie settings"
+    }
+  }
+}

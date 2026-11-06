@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>{{title}}</title>
+
+  <!-- Apply the saved / system theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = null;
+        try { saved = localStorage.getItem("theme"); } catch (e) {}
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+        addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+            meta.content = dark ? "#09090b" : "#fafafa";
+          });
+        });
+      } catch (e) {}
+      // The pre-rendered HTML is English. For other languages (same rule as getInitialLang in
+      // src/lib/i18n.jsx) hide the page until React swaps the text, with a safety timeout.
+      try {
+        var root = document.documentElement;
+        var lang = null;
+        try { lang = localStorage.getItem("lang"); } catch (e) {}
+        if (lang !== "en" && lang !== "de") lang = /^de/i.test(navigator.language || "") ? "de" : "en";
+        root.lang = lang;
+        if (lang !== "en") {
+          root.dataset.langPending = "";
+          setTimeout(function () { delete root.dataset.langPending; }, 2500);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <meta name="description" content="{{description}}" />
+  <meta name="author" content="{{name}}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{siteUrl}}/" />
+
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" href="/images/favicons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Hero portrait is the LCP element -->
+  <link rel="preload" as="image" href="/images/profile-avatar.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Resource hints -->
+  <link rel="dns-prefetch" href="https://api.emailjs.com" />
+  <link rel="dns-prefetch" href="https://www.google.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{siteUrl}}/" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:image" content="{{siteUrl}}/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="{{name}}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{description}}" />
+  <meta name="twitter:image" content="{{siteUrl}}/images/og-image.jpg" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {{jsonLd}}
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <noscript>
+    <p style="padding:2rem;font-family:system-ui">{{title}}.
+      Email: <a href="mailto:{{email}}">{{email}}</a></p>
+  </noscript>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

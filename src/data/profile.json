@@ -1,0 +1,39 @@
+{
+  "name": "Farhan Amjad",
+  "firstName": "Farhan",
+  "initials": "FA",
+  "email": "your.email@example.com",
+  "siteUrl": "https://farhan0324.github.io",
+  "location": {
+    "city": "[Your city]",
+    "region": "[Your country]",
+    "timezone": "UTC",
+    "timezoneLabel": "UTC"
+  },
+  "careerStart": "2024-01-01",
+  "socials": [
+    { "id": "github", "name": "GitHub", "url": "https://github.com/Farhan0324", "handle": "@Farhan0324" },
+    { "id": "linkedin", "name": "LinkedIn", "url": "", "handle": "" }
+  ],
+  "stack": [
+    "Flutter",
+    "Dart",
+    "Android",
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Git",
+    "GitHub Actions",
+    "Incident Response"
+  ],
+  "skills": [
+    "Flutter & Dart",
+    "Android apps",
+    "Git & GitHub",
+    "GitHub Actions",
+    "Incident response",
+    "[Add your skills]"
+  ],
+  "stats": [],
+  "resume": { "en": null, "de": null }
+}
