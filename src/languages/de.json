@@ -7,7 +7,8 @@
       "experience": "Erfahrung",
       "resume": "Lebenslauf",
       "view_resume": "Lebenslauf ansehen",
-      "download_resume": "Lebenslauf herunterladen"
+      "download_resume": "Lebenslauf herunterladen",
+      "resume_soon": "Lebenslauf folgt in Kürze"
     },
     "modal": {
       "profiles": {
@@ -74,7 +75,8 @@
           "Management des Schwachstellen-Lebenszyklus: Erkennung, Priorisierung, Koordination der Behebung und Validierung der Korrekturmaßnahmen.",
           "Entwicklung von Automatisierungsskripten für wiederkehrende Sicherheitsaufgaben, Erkennungsprozesse und operative Abläufe.",
           "Arbeit mit AWS-Sicherheitsarchitektur, sicheren Konfigurationen und Cloud-basiertem Security-Monitoring.",
-          "Durchführung strukturierter Risikoanalysen zur Bewertung technischer und geschäftlicher Auswirkungen und zur Festlegung geeigneter Maßnahmen."
+          "Durchführung strukturierter Risikoanalysen zur Bewertung technischer und geschäftlicher Auswirkungen und zur Festlegung geeigneter Maßnahmen.",
+          "Durchführung interner Audits und Unterstützung externer Audits."
         ],
         "tag": "Werkstudent"
       },
@@ -107,6 +109,7 @@
         "role": "Softwareentwickler",
         "summary": "Entwicklung von Webanwendungen und Backend-Diensten mit sicheren Entwicklungspraktiken und automatisierten Sicherheitstests.",
         "highlights": [
+          "Testen von Anwendungen mit OWASP-Methoden und Burp Suite, einschließlich statischer und dynamischer Tests sowie Code-Reviews.",
           "Umsetzung sicherer Programmierpraktiken nach OWASP-Richtlinien, um Schwachstellen in Anwendungen zu reduzieren.",
           "Integration von Sicherheitskontrollen in CI/CD-Pipelines für automatisierte Sicherheitstests.",
           "Entwicklung von Automatisierungsskripten und Tools für sichere Deployments und Infrastrukturkonfigurationen.",
@@ -206,7 +209,7 @@
   },
   "projects": {
     "heading": "Ausgewählte Projekte",
-    "subheading": "Ausgewählte Arbeiten, von Sicherheitsdokumentation bis zu mobilen Apps.",
+    "subheading": "Ausgewählte Arbeiten, von Sicherheits-Frameworks bis zu mobilen Apps.",
     "filters": [
       {
         "id": "all",
@@ -244,6 +247,18 @@
     },
     "items": [
       {
+        "id": 4,
+        "title": "Umsetzung des NIST-Frameworks",
+        "description": "Umsetzung des NIST-Sicherheitsframeworks mit Microsoft-Tools.",
+        "features": ["NIST-Framework", "Microsoft-Sicherheitstools"],
+        "developmentDetails": [
+          {
+            "label": "Überblick",
+            "text": "Praktische Anwendung des NIST-Frameworks, bei der die Sicherheitskontrollen mit Microsoft-Tools umgesetzt wurden."
+          }
+        ]
+      },
+      {
         "id": 1,
         "title": "Deutsch Spark",
         "description": "Flutter-App zum Deutschlernen von A1 bis C2 mit 1.245 Wörtern und Sätzen, 50 Grammatiklektionen, Karteikarten, Quizzen, Einstufungstests und Wiederholung in Intervallen.",
@@ -268,18 +283,6 @@
           {
             "label": "Datenschutz",
             "text": "Kein Konto und keine Werbung. Der Fortschritt bleibt offline verfügbar und lässt sich sichern."
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Umsetzung des NIST-Frameworks",
-        "description": "Umsetzung des NIST-Sicherheitsframeworks mit Microsoft-Tools.",
-        "features": ["NIST-Framework", "Microsoft-Sicherheitstools"],
-        "developmentDetails": [
-          {
-            "label": "Überblick",
-            "text": "Praktische Anwendung des NIST-Frameworks, bei der die Sicherheitskontrollen mit Microsoft-Tools umgesetzt wurden."
           }
         ]
       },

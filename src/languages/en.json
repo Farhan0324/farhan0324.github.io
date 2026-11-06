@@ -7,7 +7,8 @@
       "experience": "Experience",
       "resume": "Resume",
       "view_resume": "View Resume",
-      "download_resume": "Download Resume"
+      "download_resume": "Download Resume",
+      "resume_soon": "Resume coming soon"
     },
     "modal": {
       "profiles": {
@@ -74,7 +75,8 @@
           "Manage the vulnerability lifecycle by identifying, prioritizing and coordinating remediation, and validating corrective actions.",
           "Develop automation scripts for recurring security tasks, detection processes and operational workflows.",
           "Work with AWS security architecture, secure configurations and cloud-based security monitoring.",
-          "Conduct structured risk analyses to assess technical and business impact and define appropriate measures."
+          "Conduct structured risk analyses to assess technical and business impact and define appropriate measures.",
+          "Conduct internal audits and support external audits."
         ],
         "tag": "Working Student"
       },
@@ -107,6 +109,7 @@
         "role": "Software Engineer",
         "summary": "Built web applications and backend services with secure development practices and automated security testing.",
         "highlights": [
+          "Tested applications using OWASP practices and Burp Suite, including static testing, dynamic testing and code reviews.",
           "Implemented secure coding practices aligned with OWASP guidelines to reduce application vulnerabilities.",
           "Integrated security controls into CI/CD pipelines to support automated security testing.",
           "Developed automation scripts and tooling for secure deployment and infrastructure configuration.",
@@ -206,7 +209,7 @@
   },
   "projects": {
     "heading": "Featured Projects",
-    "subheading": "Selected work, from security documentation to mobile apps.",
+    "subheading": "Selected work, from security frameworks to mobile apps.",
     "filters": [
       {
         "id": "all",
@@ -244,6 +247,18 @@
     },
     "items": [
       {
+        "id": 4,
+        "title": "NIST Framework Implementation",
+        "description": "Implementation of the NIST security framework using Microsoft tools.",
+        "features": ["NIST Framework", "Microsoft Security Tools"],
+        "developmentDetails": [
+          {
+            "label": "Overview",
+            "text": "Applied the NIST framework in practice, using Microsoft tools to put its security controls in place."
+          }
+        ]
+      },
+      {
         "id": 1,
         "title": "Deutsch Spark",
         "description": "Flutter app for learning German from A1 to C2, with 1,245 words and sentences, 50 grammar lessons, flashcards, quizzes, level tests and spaced-repetition review.",
@@ -268,18 +283,6 @@
           {
             "label": "Privacy",
             "text": "No account and no ads. Progress stays available offline and can be backed up."
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "title": "NIST Framework Implementation",
-        "description": "Implementation of the NIST security framework using Microsoft tools.",
-        "features": ["NIST Framework", "Microsoft Security Tools"],
-        "developmentDetails": [
-          {
-            "label": "Overview",
-            "text": "Applied the NIST framework in practice, using Microsoft tools to put its security controls in place."
           }
         ]
       },
