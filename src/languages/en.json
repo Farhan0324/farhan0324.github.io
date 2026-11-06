@@ -27,7 +27,7 @@
       "paragraph1": "I'm a Cyber Security Engineer with over three years of experience in IT security engineering, security operations, and governance, risk and compliance (GRC) across cloud and enterprise environments.",
       "paragraph2": "Currently I work as a Cyber Security Engineer within the DevOps team at Bettermile, where I focus on detecting threats early, managing vulnerabilities end to end, and building security into development workflows rather than adding it afterwards. Before moving into security, I worked as a Software Engineer, which helps me speak the same language as development teams and turn security requirements into practical solutions."
     },
-    "mission": "I want to detect threats earlier and build security in from the start, and I'm especially interested in how AI-driven technologies can strengthen cybersecurity.",
+    "mission": "My mission is to strengthen cybersecurity through practical security solutions, and I am particularly motivated by the potential of AI-driven technologies to improve threat detection, automate security processes, and enhance overall security operations.",
     "education": {
       "heading": "Education",
       "items": [
@@ -143,16 +143,16 @@
         "features": ["AWS", "IAM", "Sophos EDR", "Microsoft Defender", "System Hardening"]
       },
       {
-        "title": "DevSecOps & Security Testing",
-        "description": "Building security into development through testing, code reviews and automation, rather than adding it afterwards.",
+        "title": "Application Security Testing & DevSecOps",
+        "description": "Testing applications with Burp Suite and OWASP practices, through static testing, dynamic testing and code reviews, and building security into development workflows.",
         "features": [
+          "Application Testing",
           "Burp Suite",
           "OWASP",
           "Static Testing",
           "Dynamic Testing",
           "Code Reviews",
           "CI/CD Security",
-          "Secure Coding",
           "Python Automation"
         ]
       },
@@ -317,13 +317,45 @@
       },
       {
         "id": 2,
-        "title": "IR Playbook",
-        "description": "Incident response playbook template for handling vulnerabilities in dependencies.",
-        "features": ["Response Template", "Dependency Vulnerabilities"],
+        "title": "NIS2-Aligned Incident Response Playbook",
+        "description": "Developed and implemented an Incident Response Playbook aligned with NIS2 requirements, establishing a structured approach for identifying, assessing, responding to and recovering from cybersecurity incidents.",
+        "features": [
+          "NIS2-Aligned Procedures",
+          "Incident Classification & Severity Levels",
+          "Escalation Procedures",
+          "Full Incident Handling Workflows",
+          "Regulatory Reporting Guidance",
+          "Roles & Responsibilities",
+          "Evidence Collection & Lessons Learned"
+        ],
         "developmentDetails": [
           {
-            "label": "Overview",
-            "text": "A reusable template for responding to vulnerabilities found in project dependencies."
+            "label": "Procedures",
+            "text": "Developed incident response procedures aligned with NIS2 cybersecurity and incident management requirements."
+          },
+          {
+            "label": "Classification & Escalation",
+            "text": "Defined incident classification, severity levels, escalation procedures and response responsibilities."
+          },
+          {
+            "label": "Incident Workflow",
+            "text": "Established incident handling workflows covering detection, analysis, containment, eradication, recovery and post-incident review."
+          },
+          {
+            "label": "Communication & Reporting",
+            "text": "Documented incident communication and escalation processes to support regulatory reporting obligations."
+          },
+          {
+            "label": "Roles & Coordination",
+            "text": "Defined incident response roles, responsibilities and coordination between security, IT and relevant stakeholders."
+          },
+          {
+            "label": "Continuous Improvement",
+            "text": "Supported incident documentation, evidence collection, lessons learned and continuous improvement."
+          },
+          {
+            "label": "Key Deliverable",
+            "text": "A NIS2-aligned Incident Response Playbook with documented incident handling procedures, escalation workflows, response responsibilities and reporting guidance."
           }
         ]
       },

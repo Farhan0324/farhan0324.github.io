@@ -11,7 +11,7 @@
     {
       "id": 2,
       "image": "/images/projects/ir-playbook.webp",
-      "technologies": ["Incident Response", "Dependency Security"],
+      "technologies": ["NIS2", "Incident Response", "Escalation Workflows", "Regulatory Reporting"],
       "category": "security",
       "github": "#",
       "demo": "#"
