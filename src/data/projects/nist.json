@@ -2,7 +2,7 @@
   "en": {
     "title": "NIST Cybersecurity Framework 2.0 Implementation – Microsoft Environment",
     "categories": "Cybersecurity Framework | Microsoft Security | Risk Management | Cloud Security",
-    "description": "Designed a practical implementation approach for applying NIST CSF 2.0 within a Microsoft-based enterprise environment. The project maps governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery activities to relevant Microsoft security capabilities.",
+    "description": "Designed and implemented a cybersecurity framework based on NIST CSF 2.0 for a Microsoft-based enterprise environment. The project maps governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery activities to relevant Microsoft security capabilities.",
     "sections": {
       "overview": "Overview",
       "functions": "Six CSF functions",
@@ -19,11 +19,11 @@
       "provenance": [
         {
           "label": "My work",
-          "text": "I mapped CSF 2.0 across its six functions, developed the risk register, asset inventory, current and target profiles and gap analysis, designed identity and access controls, developed vulnerability, monitoring, incident response and recovery procedures, and created the control register, roadmap, evidence repository and KPI dashboard."
+          "text": "I mapped CSF 2.0 across its six functions, developed the risk register, asset inventory, current and target profiles and gap analysis, and implemented security controls using Microsoft Entra ID, Intune, Defender and Sentinel. I designed identity and access controls, developed vulnerability, monitoring, incident response and recovery procedures, and created the control register, roadmap, evidence repository and KPI dashboard."
         },
         {
           "label": "Conceptual",
-          "text": "The architecture and roadmap show an implementation approach. They are not a picture of a deployed environment, and the product mapping is my own, not an official NIST or Microsoft mapping."
+          "text": "The architecture and roadmap are simplified summaries. They leave out configuration details, and the product mapping is my own, not an official NIST or Microsoft mapping."
         },
         {
           "label": "Illustrative",
@@ -36,8 +36,8 @@
       "title": "The six CSF 2.0 functions",
       "labels": {
         "activities": "Activities",
-        "tools": "Example Microsoft tools",
-        "evidence": "Example evidence"
+        "tools": "Tools",
+        "evidence": "Evidence"
       },
       "functions": [
         {
@@ -92,8 +92,8 @@
     },
     "architecture": {
       "lead": "Each column is one CSF function. Blocks that span two columns support both. Processes sit in their own lane because a product cannot replace them.",
-      "title": "Conceptual Microsoft security architecture by CSF function",
-      "note": "Conceptual, not a deployed environment. Availability depends on the licence: these products are not all included in every Microsoft plan, and Azure services are billed separately.",
+      "title": "Microsoft security architecture by CSF function",
+      "note": "Simplified view without configuration details. Availability depends on the licence: these products are not all included in every Microsoft plan, and Azure services are billed separately.",
       "lanes": {
         "tech": "Microsoft products and Azure services",
         "process": "Organizational processes"
@@ -415,7 +415,7 @@
       },
       {
         "title": "Microsoft Security Architecture",
-        "text": "Conceptual view of tools and processes by function."
+        "text": "Tools and processes by function."
       },
       {
         "title": "Risk Register",
@@ -450,7 +450,7 @@
   "de": {
     "title": "Umsetzung des NIST Cybersecurity Framework 2.0 – Microsoft-Umgebung",
     "categories": "Cybersecurity Framework | Microsoft Security | Risikomanagement | Cloud-Sicherheit",
-    "description": "Konzeption eines praxisnahen Umsetzungsansatzes für NIST CSF 2.0 in einer Microsoft-basierten Unternehmensumgebung. Das Projekt ordnet Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zu.",
+    "description": "Konzeption und Umsetzung eines Cybersicherheits-Frameworks auf Basis von NIST CSF 2.0 für eine Microsoft-basierte Unternehmensumgebung. Das Projekt ordnet Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zu.",
     "sections": {
       "overview": "Überblick",
       "functions": "Sechs CSF-Funktionen",
@@ -467,11 +467,11 @@
       "provenance": [
         {
           "label": "Meine Arbeit",
-          "text": "Ich habe CSF 2.0 über die sechs Funktionen abgebildet, Risikoregister, Asset-Inventar, Ist- und Soll-Profile und Gap-Analyse entwickelt, Identitäts- und Zugriffskontrollen konzipiert, Verfahren für Schwachstellen, Monitoring, Incident Response und Wiederherstellung entwickelt sowie Kontrollregister, Roadmap, Nachweisarchiv und KPI-Dashboard erstellt."
+          "text": "Ich habe CSF 2.0 über die sechs Funktionen abgebildet, Risikoregister, Asset-Inventar, Ist- und Soll-Profile und Gap-Analyse entwickelt und Sicherheitskontrollen mit Microsoft Entra ID, Intune, Defender und Sentinel umgesetzt. Außerdem habe ich Identitäts- und Zugriffskontrollen konzipiert, Verfahren für Schwachstellen, Monitoring, Incident Response und Wiederherstellung entwickelt sowie Kontrollregister, Roadmap, Nachweisarchiv und KPI-Dashboard erstellt."
         },
         {
           "label": "Konzeptionell",
-          "text": "Architektur und Roadmap zeigen einen Umsetzungsansatz. Sie bilden keine laufende Umgebung ab, und die Produktzuordnung ist meine eigene, keine offizielle Zuordnung von NIST oder Microsoft."
+          "text": "Architektur und Roadmap sind vereinfachte Zusammenfassungen. Sie lassen Konfigurationsdetails weg, und die Produktzuordnung ist meine eigene, keine offizielle Zuordnung von NIST oder Microsoft."
         },
         {
           "label": "Beispielhaft",
@@ -484,8 +484,8 @@
       "title": "Die sechs Funktionen von CSF 2.0",
       "labels": {
         "activities": "Aktivitäten",
-        "tools": "Beispielhafte Microsoft-Tools",
-        "evidence": "Beispielhafte Nachweise"
+        "tools": "Tools",
+        "evidence": "Nachweise"
       },
       "functions": [
         {
@@ -544,8 +544,8 @@
     },
     "architecture": {
       "lead": "Jede Spalte ist eine CSF-Funktion. Blöcke über zwei Spalten unterstützen beide. Prozesse stehen in einer eigenen Spur, weil kein Produkt sie ersetzen kann.",
-      "title": "Konzeptionelle Microsoft-Sicherheitsarchitektur nach CSF-Funktion",
-      "note": "Konzeptionell, keine laufende Umgebung. Die Verfügbarkeit hängt von der Lizenz ab: Diese Produkte sind nicht in jedem Microsoft-Plan enthalten, und Azure-Dienste werden separat abgerechnet.",
+      "title": "Microsoft-Sicherheitsarchitektur nach CSF-Funktion",
+      "note": "Vereinfachte Darstellung ohne Konfigurationsdetails. Die Verfügbarkeit hängt von der Lizenz ab: Diese Produkte sind nicht in jedem Microsoft-Plan enthalten, und Azure-Dienste werden separat abgerechnet.",
       "lanes": {
         "tech": "Microsoft-Produkte und Azure-Dienste",
         "process": "Organisatorische Prozesse"
@@ -867,7 +867,7 @@
       },
       {
         "title": "Microsoft-Sicherheitsarchitektur",
-        "text": "Konzeptionelle Sicht auf Tools und Prozesse je Funktion."
+        "text": "Tools und Prozesse je Funktion."
       },
       {
         "title": "Risikoregister",

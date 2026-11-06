@@ -253,7 +253,7 @@
       {
         "id": 4,
         "title": "Umsetzung des NIST Cybersecurity Framework 2.0 – Microsoft-Umgebung",
-        "description": "Konzeption eines praxisnahen Umsetzungsansatzes für NIST CSF 2.0 in einer Microsoft-basierten Unternehmensumgebung, der Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zuordnet.",
+        "description": "Konzeption und Umsetzung eines Cybersicherheits-Frameworks auf Basis von NIST CSF 2.0 für eine Microsoft-basierte Unternehmensumgebung, das Governance, Risikomanagement, Identitätsschutz, Endpoint-Sicherheit, Bedrohungserkennung, Incident Response und Wiederherstellung den passenden Microsoft-Sicherheitsfunktionen zuordnet.",
         "features": [],
         "developmentDetails": []
       },

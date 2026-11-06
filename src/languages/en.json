@@ -253,7 +253,7 @@
       {
         "id": 4,
         "title": "NIST Cybersecurity Framework 2.0 Implementation – Microsoft Environment",
-        "description": "Designed a practical implementation approach for applying NIST CSF 2.0 within a Microsoft-based enterprise environment, mapping governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery to relevant Microsoft security capabilities.",
+        "description": "Designed and implemented a cybersecurity framework based on NIST CSF 2.0 for a Microsoft-based enterprise environment, mapping governance, risk management, identity protection, endpoint security, threat detection, incident response and recovery to relevant Microsoft security capabilities.",
         "features": [],
         "developmentDetails": []
       },

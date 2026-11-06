@@ -73,7 +73,7 @@ const NistBody = ({ c, t }) => (
       <Provenance title={c.overview.provenanceTitle} items={c.overview.provenance} />
     </Section>
     <Section id="functions" n={2} title={c.sections.functions} lead={c.functions.lead}>
-      <Figure n={1} title={c.functions.title} status="illustrative" note={t("ui.project.hover")}>
+      <Figure n={1} title={c.functions.title} note={t("ui.project.hover")}>
         <CsfFunctions c={c.functions} />
       </Figure>
     </Section>
