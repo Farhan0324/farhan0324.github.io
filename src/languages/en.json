@@ -76,7 +76,7 @@
           "Develop automation scripts for recurring security tasks, detection processes and operational workflows.",
           "Work with AWS security architecture, secure configurations and cloud-based security monitoring.",
           "Conduct structured risk analyses to assess technical and business impact and define appropriate measures.",
-          "Conduct internal audits and support external audits."
+          "Conduct internal audits and support external certification audits by presenting evidence, tracking changes and following findings through to closure with control owners."
         ],
         "tag": "Working Student"
       },
@@ -125,22 +125,43 @@
       {
         "title": "Security Monitoring & Threat Detection",
         "description": "Detecting threats early through monitoring, analysis and detection engineering.",
-        "features": ["SIEM Monitoring", "Alert Analysis", "Threat Intelligence", "Detection Rules"]
+        "features": [
+          "SIEM Monitoring",
+          "Alert Analysis",
+          "Threat Intelligence",
+          "Detection Rules"
+        ]
       },
       {
         "title": "Incident Response",
         "description": "Managing the full incident lifecycle, from first signal to lasting improvements.",
-        "features": ["Investigation", "Root Cause Analysis", "Playbooks", "NIS2 Reporting"]
+        "features": [
+          "Investigation",
+          "Root Cause Analysis",
+          "Playbooks",
+          "NIS2 Reporting"
+        ]
       },
       {
         "title": "Vulnerability Management",
         "description": "Taking vulnerabilities from scanning all the way to validated remediation.",
-        "features": ["Rapid7", "Risk Prioritization", "Remediation Coordination", "Control Validation"]
+        "features": [
+          "Rapid7",
+          "Risk Prioritization",
+          "Remediation Coordination",
+          "Control Validation"
+        ]
       },
       {
         "title": "Cloud & Endpoint Security",
         "description": "Protecting cloud workloads and endpoints across the organization.",
-        "features": ["AWS", "IAM", "Sophos EDR", "Microsoft Defender", "System Hardening"]
+        "features": [
+          "AWS",
+          "IAM",
+          "Sophos EDR",
+          "Microsoft Defender",
+          "System Hardening"
+        ]
       },
       {
         "title": "Application Security Testing & DevSecOps",
@@ -296,7 +317,12 @@
         "id": 3,
         "title": "Portfolio Website",
         "description": "This site: a fast personal portfolio built with React, Vite and Tailwind CSS, with English and German content.",
-        "features": ["Pre-rendered HTML", "Command Menu", "English & German Content", "Light & Dark Themes"],
+        "features": [
+          "Pre-rendered HTML",
+          "Command Menu",
+          "English & German Content",
+          "Light & Dark Themes"
+        ],
         "developmentDetails": [
           {
             "label": "Architecture",
