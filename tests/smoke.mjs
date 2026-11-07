@@ -117,7 +117,7 @@ try {
   await check("German language and title load", async () => {
     const page = await openPage({ locale: "de-DE" });
     await page.waitForTimeout(500);
-    assert.match(await page.locator("h1").innerText(), /Sicherheit/);
+    assert.match(await page.locator("h1").innerText(), /Ich verbinde/);
     assert.equal(await page.evaluate(() => document.documentElement.lang), "de");
   });
 

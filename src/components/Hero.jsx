@@ -25,15 +25,8 @@ const ResumeMenu = () => {
     };
   }, [open]);
 
-  // Shown until a resume is set in profile.json, then this becomes the real menu.
-  if (!resume) {
-    return (
-      <button type="button" className="btn btn-ghost" disabled>
-        <Icon name="file" />
-        {t("hero.buttons.resume_soon")}
-      </button>
-    );
-  }
+  // Hidden until a resume is set in profile.json.
+  if (!resume) return null;
 
   const item =
     "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-muted transition-colors hover:bg-fg/5 hover:text-fg";
