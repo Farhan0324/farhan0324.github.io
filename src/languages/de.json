@@ -67,15 +67,15 @@
       {
         "location": "Berlin, Deutschland",
         "role": "Cyber Security Engineer",
-        "summary": "Security-Monitoring, Incident Response und Schwachstellenmanagement in Cloud- und Unternehmensumgebungen, im DevOps-Team.",
+        "summary": "ISMS, Risikomanagement, Incident Response und Schwachstellenmanagement in Cloud- und Unternehmensumgebungen, im DevOps-Team.",
         "highlights": [
-          "Überwachung von Sicherheitssystemen und Analyse von Sicherheitsereignissen, um verdächtige Aktivitäten, Anomalien und potenzielle Bedrohungen zu erkennen.",
-          "Analyse von Threat Intelligence und Angriffsmustern, um mögliche Angriffsvektoren zu erkennen und die proaktive Abwehr zu unterstützen.",
+          "Unterstützung beim Aufbau eines ISMS nach ISO 27001 und BSI IT-Grundschutz: Umsetzung von Sicherheitskontrollen, Überwachung ihrer Wirksamkeit und kontinuierliche Verbesserung.",
+          "Entwicklung von Sicherheitsrichtlinien, Policies und Standards nach ISO 27001 und NIS2, Anpassung bei geänderten Anforderungen und Durchsetzung im Arbeitsalltag.",
+          "Management von Informationssicherheitsrisiken durch Risikoanalysen und Business-Impact-Analysen, Pflege der Risikoregister in ServiceNow und Reduzierung offener Hochrisiken um 50 %.",
           "Entwicklung und Koordination von Incident-Response-Playbooks und Notfallplänen sowie Bearbeitung von Vorfällen von der Untersuchung über Eskalation und Dokumentation bis zur Nachbereitung, im Einklang mit den NIS2-Meldepflichten.",
           "Management des Schwachstellen-Lebenszyklus: Erkennung, Priorisierung, Koordination der Behebung und Validierung der Korrekturmaßnahmen.",
           "Entwicklung von Automatisierungsskripten für wiederkehrende Sicherheitsaufgaben, Erkennungsprozesse und operative Abläufe.",
           "Arbeit mit AWS-Sicherheitsarchitektur, sicheren Konfigurationen und Cloud-basiertem Security-Monitoring.",
-          "Durchführung strukturierter Risikoanalysen zur Bewertung technischer und geschäftlicher Auswirkungen und zur Festlegung geeigneter Maßnahmen.",
           "Durchführung interner Audits und Unterstützung externer Zertifizierungsaudits durch Vorlage von Nachweisen, Nachverfolgung von Änderungen und Begleitung der Feststellungen bis zum Abschluss gemeinsam mit den Control Ownern."
         ],
         "tag": "Werkstudent"
@@ -83,13 +83,15 @@
       {
         "location": "Berlin, Deutschland",
         "role": "IT Security & Administrator",
-        "summary": "Tägliche IT-Sicherheit und Administration in Unternehmensumgebungen, von Endgeräten und Identitäten bis zu Netzwerken.",
+        "summary": "IT-Sicherheit, Risiko und Compliance in Unternehmensumgebungen, von DORA und NIST CSF bis zu Identitäten, Monitoring und Wiederherstellung.",
         "highlights": [
-          "Administration der IT-Sicherheitsinfrastruktur, darunter Endpoint Protection, Firewalls, Netzwerksicherheitsgeräte und Monitoring-Tools.",
-          "System-Hardening und Management von Sicherheits-Baselines in Windows-Server- und Linux-Umgebungen.",
-          "Identitäts- und Zugriffsmanagement, darunter Active Directory, User-Lifecycle-Management, RBAC und MFA-Durchsetzung.",
-          "Netzwerksicherheit, darunter Firewall-Administration, Netzwerksegmentierung und VPN-Konfiguration.",
-          "Unterstützung bei Security-Monitoring, Vorfallsuntersuchungen und technischer Dokumentation sowie Koordination der Behebung mit Infrastrukturteams."
+          "Vorantreiben der DORA-Compliance in den Bereichen IKT-Risiko, Drittparteienrisiko und Incident Response durch Gap-Analysen und Nachverfolgung der Maßnahmen bis zum Abschluss.",
+          "Leitung der Implementierung des NIST Cybersecurity Framework: Zuordnung bestehender Kontrollen zu den NIST-Funktionen, Identifikation von Lücken und Steuerung der Behebung mit den Teams.",
+          "Bewertung und Steuerung von IT-Risiken nach COBIT durch Risikobewertungen und Threat Modeling sowie Festlegung von Maßnahmen mit klaren Verantwortlichen und Fristen.",
+          "Erstellung von Disaster-Recovery-Plänen und Wiederherstellungsrichtlinien für kritische Systeme, Verwaltung von Backup und Recovery mit Veeam und Unterstützung des Business Continuity Managements.",
+          "Kontinuierliches Security-Monitoring mit Microsoft Sentinel, Ausrichtung des Incident-Response-Prozesses an NIS2 und Koordination der Behebung mit Infrastrukturteams.",
+          "Identitäts- und Zugriffsmanagement für rund 150 Mitarbeitende mit Active Directory und Entra ID, inklusive regelmäßiger Access Reviews und Durchsetzung von MFA und RBAC.",
+          "Netzwerksicherheit, darunter Firewall-Administration, Netzwerksegmentierung und VPN-Konfiguration."
         ],
         "tag": "Werkstudent"
       },

@@ -67,15 +67,15 @@
       {
         "location": "Berlin, Germany",
         "role": "Cyber Security Engineer",
-        "summary": "Security monitoring, incident response and vulnerability management across cloud and enterprise environments, working within the DevOps team.",
+        "summary": "ISMS, risk management, incident response and vulnerability management across cloud and enterprise environments, working within the DevOps team.",
         "highlights": [
-          "Monitor security systems and analyze security events to identify suspicious activity, anomalies and potential threats.",
-          "Analyze threat intelligence and attack patterns to identify potential attack vectors and support proactive defense.",
+          "Support the development of an ISMS aligned with ISO 27001 and BSI IT-Grundschutz, implementing security controls, monitoring their effectiveness and driving continuous improvement.",
+          "Develop security guidelines, policies and standards aligned with ISO 27001 and NIS2, revising them as requirements change and enforcing them in daily work.",
+          "Manage information security risks through risk analyses and business impact evaluations, maintaining risk registers in ServiceNow and reducing open high-risk items by 50%.",
           "Develop and coordinate incident response playbooks and emergency plans, managing incidents through investigation, escalation, documentation and post-incident improvements, aligned with NIS2 reporting requirements.",
           "Manage the vulnerability lifecycle by identifying, prioritizing and coordinating remediation, and validating corrective actions.",
           "Develop automation scripts for recurring security tasks, detection processes and operational workflows.",
           "Work with AWS security architecture, secure configurations and cloud-based security monitoring.",
-          "Conduct structured risk analyses to assess technical and business impact and define appropriate measures.",
           "Conduct internal audits and support external certification audits by presenting evidence, tracking changes and following findings through to closure with control owners."
         ],
         "tag": "Working Student"
@@ -83,13 +83,15 @@
       {
         "location": "Berlin, Germany",
         "role": "IT Security & Administrator",
-        "summary": "Day-to-day IT security and administration across enterprise environments, from endpoints and identity to networks.",
+        "summary": "IT security, risk and compliance across enterprise environments, from DORA and NIST CSF to identity, monitoring and recovery.",
         "highlights": [
-          "Administered IT security infrastructure including endpoint protection, firewalls, network security devices and monitoring tools.",
-          "Performed system hardening and security baseline management across Windows Server and Linux environments.",
-          "Managed identity and access, including Active Directory, user lifecycle management, RBAC and MFA enforcement.",
-          "Managed network security including firewall administration, network segmentation and VPN configuration.",
-          "Supported security monitoring, incident investigations and technical documentation, coordinating remediation with infrastructure teams."
+          "Drove DORA compliance across ICT risk, third-party risk and incident response, running gap analyses and following remediation through to completion.",
+          "Led the NIST Cybersecurity Framework implementation, mapping existing controls to the NIST functions, identifying gaps and driving remediation with the teams.",
+          "Assessed and controlled IT risks in line with COBIT through risk assessments and threat modeling, defining mitigation measures with clear owners and deadlines.",
+          "Developed disaster recovery plans and recovery guidelines for critical systems, managed backup and recovery with Veeam, and supported business continuity.",
+          "Performed continuous security monitoring with Microsoft Sentinel, aligning the incident response process with NIS2 and coordinating remediation with infrastructure teams.",
+          "Managed identity and access for around 150 employees with Active Directory and Entra ID, running regular access reviews and enforcing MFA and RBAC.",
+          "Managed network security including firewall administration, network segmentation and VPN configuration."
         ],
         "tag": "Working Student"
       },
